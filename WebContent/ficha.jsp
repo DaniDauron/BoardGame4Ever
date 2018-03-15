@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>Ficha</title>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,11 +13,9 @@
 </head>
 <body>
 
-	<div class="jumbotron text-center">
-		<h1>HOLA</h1>
-		<p>Resize this responsive page to see the effect!</p>
-	</div>
-
+	<div id="footer">
+  		  <jsp:include page="./footer.html"/>
+		</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2  d-none d-md-none d-xl-block "
