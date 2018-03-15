@@ -1,6 +1,8 @@
 package datos;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,21 @@ public class DatosProductos extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DatosProductos() {
+    
+	 
+	    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+	            throws ServletException, IOException {
+	        //Vienes de la pagina 1 y vas a la 2
+	        RequestDispatcher view = request.getRequestDispatcher("ficha.jsp");
+	        view.forward(request, response);
+	            }
+
+	
+	
+	
+	
+	
+	public DatosProductos() {
         super();
         // TODO Auto-generated constructor stub
     }
