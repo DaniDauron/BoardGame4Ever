@@ -34,7 +34,7 @@
 						<h2>Nombre del Producto</h2>
 					</div>
 				</div>
-				<div class="row " style="padding-left: 3%;">
+				<div class="row ">
 					<div class="col-sm-8">
 						<img
 							src="https://cf.geekdo-images.com/itemrep/img/VevkNKkVOi1DgRBmHqOh1j1azXs=/fit-in/246x300/pic3429338.png"
@@ -79,8 +79,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<jsp:include page="./footer.html" />
-		</div>
+	
+		<jsp:include page="./footer.html" />
+		
 </body>
 </html>
