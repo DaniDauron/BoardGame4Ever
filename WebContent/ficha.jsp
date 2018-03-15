@@ -15,8 +15,10 @@
 </head>
 <body>
 
-	<div id="header">
+	<header>
 		<jsp:include page="./header.html" />
+	</header>
+
 	</div>
 	<div class="container">
 		<div class="row">
@@ -32,7 +34,7 @@
 						<h2>Nombre del Producto</h2>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row " style="padding-left: 3%;">
 					<div class="col-sm-8">
 						<img
 							src="https://cf.geekdo-images.com/itemrep/img/VevkNKkVOi1DgRBmHqOh1j1azXs=/fit-in/246x300/pic3429338.png"
@@ -43,6 +45,14 @@
 						<p>Edad mínima recomendada: (producto.edad)</p>
 						<p>Duracción: (producto.tiempoExtimado)</p>
 
+					</div>
+					<div class="col-sm-4" style="background: #ffffff78">
+						<p>Precio: (producto.precio)</p>
+						<button type="button" class="btn btn-primary">Comprar</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm12">
 						<span>Descripción: (producto.descripcion)</span> <span> <span>Lorem
 								ipsum dolor sit amet, consectetur adipisicing elit. Tempore
 								incidunt similique rem qui non, suscipit animi iste minus
@@ -65,20 +75,12 @@
 								tenetur modi minus necessitatibus doloribus reprehenderit cum
 								autem alias eum quia.</span>
 						</span>
-
 					</div>
-					<div class="col-sm-4" style="background: #ffffff78">LA COMPRA
-						TO GUAPA</div>
 				</div>
 			</div>
 		</div>
-
-
-
-	</div>
-	<div id="footer">
-		<jsp:include page="./footer.html" />
-	</div>
-
+		<div id="footer">
+			<jsp:include page="./footer.html" />
+		</div>
 </body>
 </html>
