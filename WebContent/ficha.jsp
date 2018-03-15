@@ -14,7 +14,7 @@
 <body>
 
 	<div id="footer">
-  		  <jsp:include page="./footer.html"/>
+  		  <jsp:include page="./header.html"/>
 		</div>
 	<div class="container">
 		<div class="row">
