@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -73,12 +73,12 @@
 			</div>
 		</div>
 
-		<div id="footer">
-			<jsp:include page="./footer.html" />
-		</div>
+
 
 	</div>
-
+	<div id="footer">
+		<jsp:include page="./footer.html" />
+	</div>
 
 </body>
 </html>
