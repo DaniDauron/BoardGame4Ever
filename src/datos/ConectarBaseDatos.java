@@ -47,8 +47,14 @@ public class ConectarBaseDatos {
 			String driverUrl = "jdbc:mysql://localhost/gameboard";
 			String user = "root";
 			String password = "1111";
-			Class.forName(driverClassName);
+			
+			System.out.println("frfa");
+			//Class.forName(driverClassName);
+			
+			System.out.println("bbbbb");
 			con = DriverManager.getConnection(driverUrl,user,password);
+			
+			System.out.println("aaaaa");
 			st = con.createStatement();
 			String query = "SELECT * FROM producto";
 			rs = st.executeQuery(query);
