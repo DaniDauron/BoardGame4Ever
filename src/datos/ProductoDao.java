@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class ConectarBaseDatos {
+public class ProductoDao {
 
 	public static Producto recuperarJuego(String numero) {
 
@@ -29,14 +29,13 @@ public class ConectarBaseDatos {
 			}
 
 			con = DriverManager.getConnection(driverUrl, user, password);
-			System.out.println("aaaaaa");
 			st = con.createStatement();
 
-			String query = "SELECT nombre, categoria, edad, duracion, jug_min, jug_max, precio, descripcion from producto where id ="
-					+ numero + ";";
+			String query = "SELECT nombre, categoria, edad, duracion, jug_min, jug_max, precio, descripcion from producto where id ="	+ numero + ";";
 			rs = st.executeQuery(query);
 			System.out.println("bbbbb");
 			x = new Producto();
+			
 			while (rs.next()) {
 				System.out.println("nombre es :" + rs.getString("nombre"));
 				x.setNombreProducto(rs.getString("nombre"));
@@ -47,7 +46,6 @@ public class ConectarBaseDatos {
 				x.setPrecio(rs.getInt("precio"));
 				x.setTiempoEstimado(rs.getInt("duracion"));
 				x.setCategoria(rs.getString("categoria"));
-
 				
 			}
 		} catch (Exception a) {

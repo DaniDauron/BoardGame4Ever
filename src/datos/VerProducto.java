@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PruebaCarlos
  */
-@WebServlet(urlPatterns = { "/PruebaCarlos" })
-public class PruebaCarlos extends HttpServlet {
+@WebServlet(urlPatterns = { "/VerProducto" })
+public class VerProducto extends HttpServlet {
 
 	/**
 	 * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,18 +32,16 @@ public class PruebaCarlos extends HttpServlet {
 			throws ServletException, IOException {
 
 		String numero = request.getParameter("juego");
-		if (numero != null){
+		if (numero != null) {
 			System.out.println("111111");
-			Producto juego = ConectarBaseDatos.recuperarJuego(numero);
+			Producto juego = ProductoDao.recuperarJuego(numero);
 			System.out.println(juego.toString());
 			request.setAttribute("producto", juego);
 		}
-		
-		
-		
+
 		RequestDispatcher view = request.getRequestDispatcher("ficha.jsp");
 		view.forward(request, response);
-		
+
 	}
 
 	// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on
