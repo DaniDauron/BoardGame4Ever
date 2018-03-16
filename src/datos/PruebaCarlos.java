@@ -34,7 +34,7 @@ public class PruebaCarlos extends HttpServlet {
 		String numero = request.getParameter("juego");
 		if (numero != null){
 			System.out.println("111111");
-			Producto juego = ConectarBaseDatos.recuperarjuego(numero);
+			Producto juego = ConectarBaseDatos.recuperarJuego(numero);
 		}
 		
 		if (Integer.parseInt(numero) == 1) {
