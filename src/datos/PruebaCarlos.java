@@ -30,10 +30,13 @@ public class PruebaCarlos extends HttpServlet {
 	 */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// Si vienes de la pagina 2, vas a la 3
 
 		String numero = request.getParameter("juego");
-
+		if (numero != null){
+			System.out.println("111111");
+			Producto juego = ConectarBaseDatos.recuperarjuego(numero);
+		}
+		
 		if (Integer.parseInt(numero) == 1) {
 			RequestDispatcher view = request.getRequestDispatcher("http://www.google.es");
 			view.forward(request, response);

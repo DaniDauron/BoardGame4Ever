@@ -1,41 +1,68 @@
 package datos;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
+/*---------------------------------------------------------------*/
 /**
- * Servlet implementation class ConectarBaseDatps
+ * En este servlet implementamos el formulario Matriculas, el cual muestra una
+ * página HTML con las distintas Matrículas que tiene cada alumno y los pagos
+ * realizados por cada alumno que hay en nuestra base de datos de la Facultad de
+ * Estudios Avanzados.
+ *
+ * Created: 10/05/2006
+ *
+ * @author Fco. Javier García Castellano fjgc@decsai.ugr.es
+ * @version 1.0
  */
-@WebServlet("/ConectarBaseDatps")
-public class ConectarBaseDatos extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ConectarBaseDatos() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+public class ConectarBaseDatos {
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public static Producto recuperarjuego(String numero) {
+
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+		try {
+		/*	String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://localhost/gameboard";
+			String user = "root";
+			String password = "1111";
+			Class.forName(driverClassName);
+			con = DriverManager.getConnection(driverUrl, user, password);
+			System.out.println("aaaaaa");
+			st = con.createStatement();	
+			
+			
+			
+			String query = "SELECT nombre, categoria, edad, duracion, jug_min, jug_max, precio, descripcion) from producto where id ="
+					+ numero + ";";
+			rs = st.executeQuery(query);
+			System.out.println("bbbbb");*/
+			
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://localhost/gameboard";
+			String user = "root";
+			String password = "1111";
+			Class.forName(driverClassName);
+			con = DriverManager.getConnection(driverUrl,user,password);
+			st = con.createStatement();
+			String query = "SELECT * FROM producto";
+			rs = st.executeQuery(query);
+			
+			
+			while (rs.next()) {
+				System.out.println("nombre es :" + rs.getString("nombre"));
+			}
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return new Producto();
+
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
-}
+}// Fin clase Matriculas
