@@ -19,7 +19,7 @@
 		<jsp:include page="./header.html" />
 	</header>
 
-	</div>
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2  d-none d-md-none d-xl-block "
@@ -41,7 +41,7 @@
 							alt="ficha" class="imagen_producto_principal"
 							style="float: left; padding-left: 1%; padding-right: 1%">
 						<p><strong>Jugadores:</strong> (producto.min) - (producto.max)</p>
-						<p><strong>Categoría: (producto.categoria)</strong></p>
+						<p><strong>Categoría:</strong> (producto.categoria)</p>
 						<p><strong>Edad mínima recomendada:</strong> (producto.edad)</p>
 						<p><strong>Duracción:</strong> (producto.tiempoExtimado)</p>
 
