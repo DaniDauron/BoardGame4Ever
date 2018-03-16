@@ -53,11 +53,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm12">
-						<span><strong>Descripción:</strong> (producto.descripcion)</span> <span> <span>Lorem
-								ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-								incidunt similique rem qui non, suscipit animi iste minus
-								nesciunt eveniet nulla aspernatur vel ipsam quas iure repellat,
-								magnam iusto quam?</span>
+						<span><strong>Descripción:</strong> ${producto.descripcion}</span>
 						</span>
 					</div>
 				</div>

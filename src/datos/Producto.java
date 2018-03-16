@@ -8,9 +8,9 @@ public class Producto {
 	
 	private String nombreProducto;
 	private String descripcion;
-	private short edad;
-	private short minJugadores;
-	private short maxJugadores;
+	private int edad;
+	private int minJugadores;
+	private int maxJugadores;
 	private String categoria;
 	private int tiempoEstimado;
 	private int precio;
@@ -51,27 +51,27 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 
-	public short getEdad() {
+	public int getEdad() {
 		return edad;
 	}
 
-	public void setEdad(short edad) {
+	public void setEdad(int edad) {
 		this.edad = edad;
 	}
 
-	public short getMinJugadores() {
+	public int getMinJugadores() {
 		return minJugadores;
 	}
 
-	public void setMinJugadores(short minJugadores) {
+	public void setMinJugadores(int minJugadores) {
 		this.minJugadores = minJugadores;
 	}
 
-	public short getMaxJugadores() {
+	public int getMaxJugadores() {
 		return maxJugadores;
 	}
 
-	public void setMaxJugadores(short maxJugadores) {
+	public void setMaxJugadores(int maxJugadores) {
 		this.maxJugadores = maxJugadores;
 	}
 

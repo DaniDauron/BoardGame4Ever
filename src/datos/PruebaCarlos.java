@@ -35,15 +35,15 @@ public class PruebaCarlos extends HttpServlet {
 		if (numero != null){
 			System.out.println("111111");
 			Producto juego = ConectarBaseDatos.recuperarJuego(numero);
+			System.out.println(juego.toString());
+			request.setAttribute("producto", juego);
 		}
 		
-		if (Integer.parseInt(numero) == 1) {
-			RequestDispatcher view = request.getRequestDispatcher("http://www.google.es");
-			view.forward(request, response);
-		}else{
+		
+		
 		RequestDispatcher view = request.getRequestDispatcher("ficha.jsp");
 		view.forward(request, response);
-		}
+		
 	}
 
 	// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on

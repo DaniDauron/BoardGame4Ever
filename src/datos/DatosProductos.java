@@ -16,8 +16,8 @@ public class DatosProductos extends HttpServlet {
 		   
 		    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 		            throws ServletException, IOException {
-		        //Vienes de la pagina 1 y vas a la 2
-		        RequestDispatcher view = request.getRequestDispatcher("pruebaCarlos.html");
+
+		    	RequestDispatcher view = request.getRequestDispatcher("pruebaCarlos.html");
 		        view.forward(request, response);
 		    }
 
