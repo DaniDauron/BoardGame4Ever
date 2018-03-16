@@ -15,6 +15,8 @@ public class ProductoDao {
 		Statement st = null;
 		ResultSet rs = null;
 
+		
+		
 		Producto x;
 
 		try {

@@ -31,6 +31,7 @@ public class VerProducto extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		
 		String numero = request.getParameter("juego");
 		if (numero != null) {
 			System.out.println("111111");
