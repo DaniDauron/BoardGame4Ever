@@ -39,7 +39,6 @@ public class ProductoDao {
 			x = new Producto();
 			
 			while (rs.next()) {
-				System.out.println("nombre es :" + rs.getString("nombre"));
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setEdad(rs.getInt("edad"));
