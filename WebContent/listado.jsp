@@ -6,6 +6,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Righteous'
+	rel='stylesheet'>
 <!-- Bootstrap core CSS -->
 <link
 	href="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css"
@@ -13,8 +15,8 @@
 <!-- Custom styles for this template -->
 <link href="./startbootstrap-shop-item-gh-pages/css/shop-item.css"
 	rel="stylesheet">
-	
-	<link href="./css/nuestro.css" rel="stylesheet">
+
+<link href="./css/nuestro.css" rel="stylesheet">
 <!-- Bootstrap core JavaScript -->
 <script
 	src="./startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
@@ -27,7 +29,7 @@
 		<jsp:include page="./header.html" />
 	</header>
 
-	<div class="container" style="background: #93a4af;">
+	<div class="container">
 
 		<div class="row">
 			<!--  Sidebar div de clase coHg-3 -->
@@ -38,16 +40,16 @@
 
 				<div class="container micontenedor" style="">
 					<div class="row">
-						<h2>${tituloPagina} Observe todos nuestros juegos</h2>
+						<h2>${tituloPagina}Observe todos nuestros juegos</h2>
 					</div>
 					<div class="row">
 
 						<c:forEach var="juego" items="${listadoJuegos}">
 							<div class="col-lg-4">
-								<a href=" VerProducto?juego=${juego.id}"> <img
-									alt="${juego.bombre}" class="img-fluid" src="${juego.imagen}">
-									<p>${juego.nombre}</p>
-									<p>${juego.precio}</p>
+								<a href=" VerProducto?juego=${juego.id}">
+								 <img	alt="${juego.bombre}" class="img-fluid" src="${juego.imagen}">
+									<p class="nombre">${juego.nombre}</p>
+									<p class="precio">${juego.precio}</p>
 								</a>
 							</div>
 
@@ -61,8 +63,8 @@
 						<div class="col-lg-4">
 							<img alt="juego" class="img-fluid"
 								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
+							<p class="nombre">Juego${juego.nombre}</p>
+							<p class="precio">Precio${juego.precio}</p>
 						</div>
 						<div class="col-lg-4">
 							<img alt="juego" class="img-fluid"

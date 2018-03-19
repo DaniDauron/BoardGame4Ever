@@ -4,4 +4,24 @@
 	padding-top:100px;
 }
 
+body{
+	background: #93a4af;
+}
 
+*{
+	font-family:"Righteous";
+}
+
+p,span {
+	font-size:16px;
+}
+
+.precio{
+	font-wight: bold;
+	text-align: center;
+}
+
+.nombre{
+	font-wight: bold;
+	text-align: center;
+}
