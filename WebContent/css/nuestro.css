@@ -25,3 +25,11 @@ p,span {
 	font-wight: bold;
 	text-align: center;
 }
+
+.titulopagina{
+	padding-bottom:50px;
+}
+
+.img-fluid{
+	width: 100%;
+}
