@@ -20,8 +20,8 @@ public class VerListadoProductos extends HttpServlet {
 
 		HttpSession sesion = request.getSession();
 		
-		//if(request.getAttribute("limite"))
-		List<Producto> juegos = ListadoSliderDao.recuperarElementoListado();
+		//if(request.getAttribute("limite")).
+		List<Producto> juegos = ListadoDao.recuperarElementoListado();
 		
 		sesion.setAttribute("listadoJuegos", juegos);
 		

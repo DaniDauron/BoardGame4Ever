@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListadoSliderDao {
+public class ListadoDao {
 
 	static Connection con = null;
 	static Statement st = null;
