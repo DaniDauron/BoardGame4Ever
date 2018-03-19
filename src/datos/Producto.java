@@ -5,7 +5,8 @@ public class Producto {
 	/*
 	 * Atributos
 	 */
-	
+
+	private int idProd;
 	private String nombreProducto;
 	private String descripcion;
 	private int edad;
@@ -13,7 +14,7 @@ public class Producto {
 	private int maxJugadores;
 	private String categoria;
 	private int tiempoEstimado;
-	private int precio;
+	private float precio;
 	
 	/*
 	 * Constructor y métodos.
@@ -23,16 +24,26 @@ public class Producto {
 		
 	}
 	
-	public Producto (String NP, String Des, short Edad, short MinJ, short MaxJ, String cat, int Tiempo, int precio){
-		
-		this. nombreProducto = NP;
-		this. descripcion = Des;
-		this. edad= Edad;
-		this. minJugadores= MinJ;
-		this. maxJugadores= MaxJ;
-		this. categoria= cat;
-		this. tiempoEstimado= Tiempo;
-		this. precio= precio;
+	public Producto(int idProd, String nombreProducto, String descripcion, int edad, int minJugadores, int maxJugadores,
+			String categoria, int tiempoEstimado, int precio) {
+		super();
+		this.idProd = idProd;
+		this.nombreProducto = nombreProducto;
+		this.descripcion = descripcion;
+		this.edad = edad;
+		this.minJugadores = minJugadores;
+		this.maxJugadores = maxJugadores;
+		this.categoria = categoria;
+		this.tiempoEstimado = tiempoEstimado;
+		this.precio = precio;
+	}
+
+	public int getIdProd() {
+		return idProd;
+	}
+
+	public void setIdProd(int idProd) {
+		this.idProd = idProd;
 	}
 
 	public String getNombreProducto() {
@@ -91,19 +102,21 @@ public class Producto {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public int getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(int precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 
 	@Override
 	public String toString() {
-		return "Producto [nombreProducto=" + nombreProducto + ", descripcion=" + descripcion + ", edad=" + edad
-				+ ", minJugadores=" + minJugadores + ", maxJugadores=" + maxJugadores + ", categoria=" + categoria
-				+ ", tiempoEstimado=" + tiempoEstimado + ", precio=" + precio + "]";
+		return "Producto [idProd=" + idProd + ", nombreProducto=" + nombreProducto + ", descripcion=" + descripcion
+				+ ", edad=" + edad + ", minJugadores=" + minJugadores + ", maxJugadores=" + maxJugadores
+				+ ", categoria=" + categoria + ", tiempoEstimado=" + tiempoEstimado + ", precio=" + precio + "]";
 	}
+
+	
 	
 }
