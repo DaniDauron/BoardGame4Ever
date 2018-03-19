@@ -40,15 +40,15 @@
 
 				<div class="container micontenedor" style="">
 					<div class="row">
-						<h2 class="titulopagina">${tituloPagina}Observe todos nuestros juegos</h2>
+						<h2 class="titulopagina">${tituloPagina}</h2>
 					</div>
 					<div class="row">
 
 						<c:forEach var="juego" items="${listadoJuegos}">
 							<div class="col-lg-4  col-sm-12">
-								<a href=" VerProducto?juego=${juego.id}">
-								 <img	alt="${juego.bombre}" class="img-fluid" src="${juego.imagen}">
-									<p class="nombre">${juego.nombre}</p>
+								<a href=" VerProducto?juego=${juego.id}"> <img
+									alt="${juego.nombreProducto}" class="img-fluid" src="">
+									<p class="nombre">${juego.nombreProducto}</p>
 									<p class="precio">${juego.precio}</p>
 								</a>
 								<button type="button" class="btn btn-warning">Comprar</button>
@@ -56,63 +56,10 @@
 						</c:forEach>
 					</div>
 				</div>
-
-
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4  col-sm-12">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p class="nombre">Juego${juego.nombre}</p>
-							<p class="precio">Precio${juego.precio}</p>
-						</div>
-						<div class="col-lg-4">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4  col-sm-12">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4  col-sm-12">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-						<div class="col-lg-4">
-							<img alt="juego" class="img-fluid"
-								src="https://images-na.ssl-images-amazon.com/images/I/71gRRFM0daL._SY355_.jpg">
-							<p>Juego</p>
-							<p>Precio</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<jsp:include page="./footer.html" />
 </body>
