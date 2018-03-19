@@ -46,9 +46,9 @@
 
 						<c:forEach var="juego" items="${listadoJuegos}">
 							<div class="col-lg-4  col-sm-12">
-								<a href=" VerProducto?juego=${juego.id}">
-								 <img	alt="${juego.bombre}" class="img-fluid" src="${juego.imagen}">
-									<p class="nombre">${juego.nombre}</p>
+								<a href=" VerProducto?juego=${juego.idProd}">
+								 <img	alt="${juego.nombreProducto}" class="img-fluid" >
+									<p class="nombre">${juego.nombreProducto}</p>
 									<p class="precio">${juego.precio}</p>
 								</a>
 								<button type="button" class="btn btn-warning">Comprar</button>
