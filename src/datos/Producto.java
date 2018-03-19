@@ -14,7 +14,7 @@ public class Producto {
 	private int maxJugadores;
 	private String categoria;
 	private int tiempoEstimado;
-	private int precio;
+	private float precio;
 	
 	/*
 	 * Constructor y métodos.
@@ -102,11 +102,11 @@ public class Producto {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public int getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(int precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 
