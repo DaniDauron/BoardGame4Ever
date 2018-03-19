@@ -15,6 +15,7 @@ public class Producto {
 	private String categoria;
 	private int tiempoEstimado;
 	private float precio;
+	private String imagen;
 	
 	/*
 	 * Constructor y métodos.
@@ -108,6 +109,16 @@ public class Producto {
 
 	public void setPrecio(float precio) {
 		this.precio = precio;
+	}
+	
+	
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 	@Override
