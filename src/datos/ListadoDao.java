@@ -19,8 +19,6 @@ public class ListadoDao {
 	
 		
 		List slider= new ArrayList(6);
-		
-		
 		ElementoListado x;
 
 		try {
