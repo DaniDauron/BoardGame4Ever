@@ -1,5 +1,5 @@
 .container {
-  margin-top: 50px;
+  margin-top: 250px;
 }
 
 
@@ -57,7 +57,7 @@
 
 .carousel-control.left span,
 .carousel-control.right span {
-  background-color: #ff0080;
+  background-color: #004000;
 }
 
 .carousel-control.left span:hover,
@@ -83,8 +83,8 @@
 }
 
 .header-text h2 span {
-  background-color: #2980b9;
-  padding: 10px;
+  background-color: #c0c0c0;
+  padding: 5px;
 }
 
 .header-text h3 span {
