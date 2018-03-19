@@ -93,7 +93,7 @@
 				<div class="offset-3 col-md-3 ">
 				<div class="row">
 				<div class="col-md-7">
-					<h4 style="text-align:right;">${producto.precio} €</h4>
+					<h4 style="text-align:right;">${producto.precio}  &euro;</h4>
 					<button style="text-align:right;" type="button" class="btn btn-primary">Comprar</button>
 				</div>
 			</div>
