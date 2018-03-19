@@ -33,21 +33,22 @@ public class ProductoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT nombre, categoria, edad, duracion, jug_min, jug_max, precio, descripcion from producto where id ="	+ numero + ";";
+			String query = "SELECT id,nombre, categoria, edad, duracion, jug_min, jug_max, precio, descripcion, img from producto where id ="	+ numero + ";";
 			rs = st.executeQuery(query);
 			System.out.println("bbbbb");
 			x = new Producto();
 			
 			while (rs.next()) {
-				System.out.println("nombre es :" + rs.getString("nombre"));
+				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setEdad(rs.getInt("edad"));
 				x.setMinJugadores(rs.getInt("jug_min"));
 				x.setMaxJugadores(rs.getInt("jug_max"));
 				x.setDescripcion(rs.getString("descripcion"));
-				x.setPrecio(rs.getInt("precio"));
+				x.setPrecio(rs.getFloat("precio"));
 				x.setTiempoEstimado(rs.getInt("duracion"));
 				x.setCategoria(rs.getString("categoria"));
+				x.setImagen(rs.getString("img"));
 				
 			}
 		} catch (Exception a) {

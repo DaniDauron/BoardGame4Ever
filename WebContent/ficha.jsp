@@ -76,29 +76,16 @@
 	-->
 	
 	  <!-- Page Content -->
-    <div class="container" background="#93a4af">
+    <div class="container" style="background:#93a4af";>
 
       <div class="row">
 <!--  Sidebar div de clase coHg-3 -->
 <jsp:include page="./sidebar.html" />
 
-      <% /*<!--  -->  <div class="col-lg-3">
-          <h3 class="my-4">Menu</h3>
-          <div class="list-group">
-            <div class="list-group-item"><h5>Categorías</h5></div>
-			<a href="#" class="list-group-item"> - Tablero</a>
-            <a href="#" class="list-group-item"> - Cartas</a>
-            <a href="#" class="list-group-item"> - Dados</a>
-			<a href="#" class="list-group-item"><h5>Top Ventas</h5></a> <!-- CSS -->
-			<a href="#" class="list-group-item"><h5>Novedades</h5></a> <!-- CSS -->
-          </div>
-        </div> -->
-        <!-- /.col-lg-3 -->*/
-%>
         <div class="col-lg-9">
 
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201708/03/00197632608028____1__640x640.jpg" alt="">
+            <img class="card-img-top img-fluid" src="${producto.imagen }" alt="">
 			<div class="row">
 				<div class="col-md-6">
 					<h2 class="card-title offset-4">${producto.nombreProducto}</h2>
