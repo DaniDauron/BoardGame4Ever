@@ -32,7 +32,7 @@
 	<div class="container">
 
 		<div class="row">
-			<!--  Sidebar div de clase coHg-3 -->
+			<!--  Sidebar div de clase col-lg-3 -->
 			<jsp:include page="./sidebar.html" />
 
 			<!--  Contenido de la pagina -->
