@@ -21,10 +21,16 @@ public class VerListadoProductos extends HttpServlet {
 		HttpSession sesion = request.getSession();
 		
 		List<Producto> juegos;
+		String pagina="";
 		
-		if(request.getParameter("pagina").equals("principal")){
-			 juegos = ListadoDao.recuperarElementoListado(6);
-			
+		try {
+			pagina = request.getParameter("pagina");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		if(pagina.equals("principal")){
+			 juegos = ListadoDao.recuperarElementoListado(6);			
 		}else{
 			juegos = ListadoDao.recuperarElementoListado();			
 		}

@@ -33,7 +33,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id,nombre,precio from producto ";
+			String query = "SELECT id,nombre,precio,img from producto ";
 			rs = st.executeQuery(query);
 			System.out.println("bbbbb");
 
@@ -44,6 +44,7 @@ public class ListadoDao {
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
 				slider.add(x);
 			}
 
@@ -79,7 +80,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id,nombre,precio from producto ";
+			String query = "SELECT id,nombre,precio,img from producto ";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -87,6 +88,7 @@ public class ListadoDao {
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
 				slider.add(x);
 			}
 

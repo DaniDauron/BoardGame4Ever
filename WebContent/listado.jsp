@@ -48,7 +48,8 @@
 							<div class="col-lg-4  col-sm-12">
 
 								<a href=" VerProducto?juego=${juego.idProd}">
-									<img alt="${juego.nombreProducto}" class="img-fluid" href="${juego.imagen }">
+									<img alt="${juego.nombreProducto}" class="img-fluid" src="${juego.imagen }">							
+									
 
 									<p class="nombre">${juego.nombreProducto}</p>
 									<p class="precio">${juego.precio}</p>
