@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListadoDao {
+public class ListadoSliderDao {
 
 	public static List recuperarElementoListado (String numero) {
 
