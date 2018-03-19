@@ -7,10 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListadoDao {
+public class ListadoSliderDao {
 
-	
-	public static List listadoJuegos (String numero) {
+	public static List recuperarElementoListado (String numero) {
 
 		// TODO Auto-generated method stub
 
@@ -19,7 +18,7 @@ public class ListadoDao {
 		ResultSet rs = null;
 	
 		
-		List listado= new ArrayList();
+		List slider= new ArrayList(6);
 		ElementoListado x;
 
 		try {
@@ -38,26 +37,37 @@ public class ListadoDao {
 
 			String query = "SELECT id,nombre,precio from producto ";
 			rs = st.executeQuery(query);
-			
+			System.out.println("bbbbb");
 			
 			x = new ElementoListado();
 			
 		
-			while (rs.next()){
+			for (int i=0; i<6 && rs.next(); i++){
 				x.setId(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
-				listado.add(x);
+				slider.add(x);
 			}
 			
 			
-		
+			/*
+			 * while (rs.next() && continuar) {
+				System.out.println("nombre es :" + rs.getString("nombre"));
+				x.setId(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				
+			}
+			*/
+			
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
 			x= new ElementoListado();
 		}
 
-		return listado;
+		return slider;
 
 	}
+	
+	
 }
