@@ -21,8 +21,8 @@ public class ProductoDao {
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
-			String driverUrl = "jdbc:mysql://localhost/gameboard";
-			String user = "root";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
 			String password = "1111";
 			try {
 				Class.forName(driverClassName);
