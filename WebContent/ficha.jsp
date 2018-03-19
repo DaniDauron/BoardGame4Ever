@@ -76,7 +76,7 @@
 	-->
 	
 	  <!-- Page Content -->
-    <div class="container" background="#93a4af">
+    <div class="container" style="background:#93a4af";>
 
       <div class="row">
 <!--  Sidebar div de clase coHg-3 -->
