@@ -3,13 +3,22 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Righteous'
+	rel='stylesheet'>
 <!-- Bootstrap core CSS -->
-<link 	href="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css"  	rel="stylesheet">
+<link
+	href="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- Custom styles for this template -->
-<link href="./startbootstrap-shop-item-gh-pages/css/shop-item.css" 	rel="stylesheet">
+<link href="./startbootstrap-shop-item-gh-pages/css/shop-item.css"
+	rel="stylesheet">
+
+<link href="./css/nuestro.css" rel="stylesheet">
 <!-- Bootstrap core JavaScript -->
-<script 	src="./startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
-<script  	src="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script
+	src="./startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
+<script
+	src="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <title>Los mejores juegos de mesa</title>
 </head>
 <body>
@@ -20,7 +29,7 @@
 	<div class="container"  style="background:#93a4af;">
 
 		<div class="row">
-			<!--  Sidebar div de clase coHg-3 -->
+			<!--  Sidebar div de clase col-lg-3 -->
 			<jsp:include page="./sidebar.html" />
 
 			<!--  Contenido de la pagina -->

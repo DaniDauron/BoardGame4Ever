@@ -35,10 +35,9 @@ public class ListadoDao {
 
 			String query = "SELECT id,nombre,precio,img from producto ";
 			rs = st.executeQuery(query);
-			System.out.println("bbbbb");
+			
 
-			int contador = 0;
-
+		
 			for (int i = 0; i < limite && rs.next(); i++) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
@@ -47,8 +46,7 @@ public class ListadoDao {
 				x.setImagen(rs.getString("img"));
 				slider.add(x);
 			}
-
-		
+	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());

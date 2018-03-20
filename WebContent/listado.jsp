@@ -38,7 +38,7 @@
 			<!--  Contenido de la pagina -->
 			<div class="col-lg-9">
 
-				<div class="container micontenedor" style="">
+				<div class="container micontenedor">
 					<div class="row">
 						<h2 class="titulopagina">${tituloPagina}</h2>
 					</div>
