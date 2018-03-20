@@ -5,6 +5,8 @@
 
 /* Carousel Styles */
 
+
+
 .carousel-indicators .active {
   background-color: #804040;
 }
@@ -28,11 +30,11 @@
 }
 
 .carousel-control.left span {
-  padding: 15px;
+  padding: 20px;
 }
 
 .carousel-control.right span {
-  padding: 15px;
+  padding: 20px;
 }
 
 .carousel-control .glyphicon-chevron-left,
@@ -78,7 +80,14 @@
   color: #fff;
 }
 
+.header-text h1{
+	position: absolute;
+	padding: 20px;
+	font-size: 40px;
+}
+
 .header-text h2 {
+  position: absolute; 
   font-size: 40px;
 }
 
