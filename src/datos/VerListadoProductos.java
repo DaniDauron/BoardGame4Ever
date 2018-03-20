@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 public class VerListadoProductos extends HttpServlet {
 
 	
+	@SuppressWarnings("unchecked")
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
