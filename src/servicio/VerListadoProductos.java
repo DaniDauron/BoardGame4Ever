@@ -1,4 +1,4 @@
-package datos;
+package servicio;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import datos.ListadoDao;
+import modelo.Producto;
 
 @WebServlet(urlPatterns = { "/VerListado" })
 public class VerListadoProductos extends HttpServlet {

@@ -7,6 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import modelo.Producto;
+
 public class ListadoDao {
 
 	static Connection con = null;
