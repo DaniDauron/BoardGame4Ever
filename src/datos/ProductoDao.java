@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import modelo.Producto;
+
 public class ProductoDao {
 
 	public static Producto recuperarJuego(String numero) {

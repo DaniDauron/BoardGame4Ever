@@ -1,4 +1,4 @@
-package datos;
+package modelo;
 
 public class Producto {
 
@@ -103,7 +103,7 @@ public class Producto {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public float getPrecio() {
+	public float getPrecio() {		
 		return precio;
 	}
 
