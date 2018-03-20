@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -30,7 +31,7 @@
 					<div class="row">
 
 						<c:forEach var="juego" items="${listadoJuegos}">
-							<div class="col-lg-4  col-sm-12">
+							<div class="col-lg-4  col-sm-12  border rounded">
 
 								<a href=" VerProducto?juego=${juego.idProd}"> <img
 									alt="${juego.nombreProducto}" class="img-fluid img-listado"
@@ -38,9 +39,24 @@
 								</a>
 
 								<p class="nombre">${juego.nombreProducto}</p>
-								<p class="precio">${juego.precio}</p>
+								<fmt:setLocale value="es_ES" />
+								<p class="precio">
+									<fmt:formatNumber type="currency" value="${juego.precio}" />
+								</p>
+								<div class="row">
+									<div class="offset-1 col-lg-4 ">
+										<button type="button" class="btn btn-warning">Comprar</button>
+									</div>
+									<div class="offset-1 col-lg-4">
 
-								<button type="button" class="btn btn-warning">Comprar</button>
+										<a href=" VerProducto?juego=${juego.idProd}">
+											<button class="btn btn-success">Mas Info</button>
+										</a>
+
+									</div>
+								</div>
+
+
 							</div>
 						</c:forEach>
 					</div>

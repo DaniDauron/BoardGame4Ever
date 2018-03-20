@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <title>Ficha</title>
 <meta charset="UTF-8">
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
 <jsp:include page="./imports_comunes.html" />	
 </head>
 <body>
@@ -30,7 +33,8 @@
 				<div class="offset-3 col-md-3 ">
 				<div class="row">
 				<div class="col-md-7">
-					<h4 style="text-align:right;">${producto.precio}  &euro;</h4>
+				<fmt:setLocale value = "es_ES"/>							
+				<h4 style="text-align:right;"><fmt:formatNumber type = "currency"    value = "${producto.precio}" /></h4>
 					<button style="text-align:right;" type="button" class="btn btn-primary">Comprar</button>
 				</div>
 			</div>
