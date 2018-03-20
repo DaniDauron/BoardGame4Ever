@@ -5,17 +5,7 @@
 <head>
 <title>Ficha</title>
 <meta charset="UTF-8">
-
-<link href='https://fonts.googleapis.com/css?family=Righteous'
-	rel='stylesheet'>
-	<link href="./css/nuestro.css" rel="stylesheet">
-    <link href="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="./startbootstrap-shop-item-gh-pages/css/shop-item.css" rel="stylesheet">
-   
-    <script src="./startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
-    <script src="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
+<jsp:include page="./imports_comunes.html" />	
 </head>
 <body>
 
