@@ -31,7 +31,7 @@
 					<div class="row">
 
 						<c:forEach var="juego" items="${listadoJuegos}">
-							<div class="col-lg-4  col-sm-12  border rounded">
+							<div class="col-lg-4  col-sm-12  producto">
 
 								<a href=" VerProducto?juego=${juego.idProd}"> <img
 									alt="${juego.nombreProducto}" class="img-fluid img-listado"
