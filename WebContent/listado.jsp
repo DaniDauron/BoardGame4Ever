@@ -48,12 +48,12 @@
 							<div class="col-lg-4  col-sm-12">
 
 								<a href=" VerProducto?juego=${juego.idProd}">
-									<img alt="${juego.nombreProducto}" class="img-fluid" src="${juego.imagen }">							
-									
+									<img alt="${juego.nombreProducto}" class="img-fluid img-listado" src="${juego.imagen }">							
+									</a>	
 
 									<p class="nombre">${juego.nombreProducto}</p>
 									<p class="precio">${juego.precio}</p>
-								</a>
+							
 								<button type="button" class="btn btn-warning">Comprar</button>
 							</div>
 						</c:forEach>

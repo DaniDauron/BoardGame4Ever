@@ -33,3 +33,7 @@ p,span {
 .img-fluid{
 	width: 100%;
 }
+
+.img-listado{
+	max-height: 253px;
+}
