@@ -6,22 +6,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<link href='https://fonts.googleapis.com/css?family=Righteous'
-	rel='stylesheet'>
-<!-- Bootstrap core CSS -->
-<link
-	href="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-<!-- Custom styles for this template -->
-<link href="./startbootstrap-shop-item-gh-pages/css/shop-item.css"
-	rel="stylesheet">
-
-<link href="./css/nuestro.css" rel="stylesheet">
-<!-- Bootstrap core JavaScript -->
-<script
-	src="./startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
-<script
-	src="./startbootstrap-shop-item-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<jsp:include page="./imports_comunes.html" />
 <title>Los mejores juegos de mesa</title>
 </head>
 <body>
@@ -29,7 +14,7 @@
 		<jsp:include page="./header.html" />
 	</header>
 
-	<div class="container">
+	<div class="container contenidoprincipal">
 
 		<div class="row">
 			<!--  Sidebar div de clase col-lg-3 -->
@@ -47,13 +32,14 @@
 						<c:forEach var="juego" items="${listadoJuegos}">
 							<div class="col-lg-4  col-sm-12">
 
-								<a href=" VerProducto?juego=${juego.idProd}">
-									<img alt="${juego.nombreProducto}" class="img-fluid img-listado" src="${juego.imagen }">							
-									</a>	
+								<a href=" VerProducto?juego=${juego.idProd}"> <img
+									alt="${juego.nombreProducto}" class="img-fluid img-listado"
+									src="${juego.imagen }">
+								</a>
 
-									<p class="nombre">${juego.nombreProducto}</p>
-									<p class="precio">${juego.precio}</p>
-							
+								<p class="nombre">${juego.nombreProducto}</p>
+								<p class="precio">${juego.precio}</p>
+
 								<button type="button" class="btn btn-warning">Comprar</button>
 							</div>
 						</c:forEach>
@@ -61,9 +47,10 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
-
-
 	<jsp:include page="./footer.html" />
+
+
 </body>
 </html>

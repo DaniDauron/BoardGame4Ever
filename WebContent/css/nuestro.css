@@ -1,49 +1,68 @@
-
-.micontenedor{
-	
-	padding-top:100px;
+.micontenedor {
+	padding-top: 100px;
 }
 
-body{
-	background: #93a4af;
+body {
+	background: #93a4af !important;
 }
 
-*{
-	font-family:"Righteous";
+* {
+	font-family: "Arial";
 }
 
-p,span {
-	font-size:16px;
+p, span {
+	font-size: 16px;
 }
 
-.precio{
+.precio {
 	font-wight: bold;
 	text-align: center;
 }
 
-.nombre{
+.nombre {
 	font-wight: bold;
 	text-align: center;
 }
 
-.titulopagina{
-	padding-bottom:50px;
+.titulopagina {
+	padding-bottom: 50px;
 }
 
-.img-fluid{
+.img-fluid {
 	width: 100%;
 }
 
-.img-listado{
+.img-listado {
 	max-height: 235px;
 }
 
+.card-img-top {
+	width: 30% !important;
+	margin-left: 30%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-top-left-radius: calc(.25rem - 1px);
+	border-top-right-radius: calc(.25rem - 1px);
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+.footer {
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f5f5f5;
+}
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.contenidoprincipal {
+	margin-bottom: 25px;
 }
