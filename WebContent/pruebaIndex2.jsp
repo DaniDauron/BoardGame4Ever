@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-
 <script src="startbootstrap-shop-item-gh-pages/vendor/jquery/jquery.min.js"></script>
-	
 <link href="./startbootstrap-shop-item-gh-pages/css/bootstrap_index.css" rel="stylesheet" id="bootstrap-css">
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
@@ -16,13 +14,14 @@
 
 <html lang="en">
 <meta charset="UTF-8">
-<body>
+
 	<header> <jsp:include page="./header.html" /></header>
-</body>	
+	
 	<div class="container">
-		<div class="row">
+	
+			<div class="row">
 			<!-- Carousel -->
-			<div id="carousel-example-generic" class="carousel slide" data-interval="4000" data-ride="carousel">
+			<div id="carousel-example-generic" class="carousel slide" data-interval="5000" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -30,70 +29,54 @@
 					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 				</ol>
 				<!-- Wrapper for slides -->
-				<h1>
-					<span> <strong> AQUI VENDRA EL TITULO DEL JUEGO</strong></span>
-				</h1>
-				<div class="carousel-inner">
+									
+					<div class="carousel-inner">
 					<div class="item active">
-						<img src="src/trivial-pursuit-master.jpg" alt="primera transicion">
+		<!-- AQUI EMPIEZA LA PRIMERA TRANSICION -->				
+					<h1 id="titulo">
+					<strong> AQUI VENDRA EL TITULO DEL JUEGO</strong>
+					</h1>
+					<img src="src/trivial-pursuit-master.jpg" alt="primera transicion">
 						<!-- Static Header -->
-						<div class="header-text hidden-xs">
-							<div class="col-md-12 text-center">
-								<br>
-								<h3>
-									<span> AQUI VENDRA LA DESCRIPCION DEL TITULO.....</span>
-								</h3>
-								<br>
-								<div class="">
-									<a class="btn btn-theme btn-sm btn-min-block" href="#"> COMPRAR </a>
-									<a class="btn btn-theme btn-sm btn-min-block" href="#"> LISTA DE SEGUIMIENTO </a>
-								</div>
+						<div class="header-text hidden-xs"></div>
+							<div class="col-md-12 text-center"></div>					
+							<div>
+							<h3>
+								<p id="descripcion"> AQUI VENDRA LA DESCRIPCION DEL JUEGO.....</p>
+							</h3>
 							</div>
+							
+					<!--  Botones de abajo comprar, seguir -->		
+						<div class="">
+					
 						</div>
-						<!-- /header-text -->
+						<!-- /header-text AQUI EMPIEZA LA SEGUNDA DIAPOSITIVA-->
 					</div>
 					<div class="item">
-						<img src="src/magic.jpg" alt="Segunda transicion">
+					<h1 id="titulo">
+					<strong> AQUI VENDRA EL TITULO DEL 2 JUEGO</strong></p>
+					</h1>
+					<img src="src/magic.jpg" alt="Segunda transicion">
 						<!-- Static Header -->
-						<div class="header-text hidden-xs">
-							<div class="col-md-12 text-center">
-								<h2>
-									<span><strong> TITULO SEGUNDA </strong></span>
-								</h2>
-								<br>
+						<div class="header-text hidden-xs"></div>
+							<div class="col-md-12 text-center"></div>
 								<h3>
-									<span> SEGUNDA DESCRIPTCION </span>
+									<p id="descripcion"> SEGUNDA DESCRIPTCION </p>
 								</h3>
-								<br>
-								<div class="">
-									<a class="btn btn-theme btn-sm btn-min-block" href="#">COMPRAR2</a>
-									<a class="btn btn-theme btn-sm btn-min-block" href="#">LISTA DE SEGUIMIENTO 2</a>
-								</div>
-							</div>
-						</div>
-						<!-- /header-text -->
 					</div>
+					<!-- /header-text  AQUI EMPIEZA LA TERCERA TRANSICION -->
 					<div class="item">
+					<h1 id="titulo">
+				 	<strong> AQUI VENDRA EL TITULO DEL JUEGO 3</strong>
 						<img src="src/dados.jpg" alt="Tercera dispositiva">
 						<!-- Static Header -->
-						<div class="header-text hidden-xs">
-							<div class="col-md-12 text-center">
-								<h2>
-									<span><strong>TERCER TITULO</strong></span>
-								</h2>
+						<div class="header-text hidden-xs"></div>
+							<div class="col-md-12 text-center"></div>
 								<br>
 								<h3>
-									<span>TERCERA DIAPOSITIVA</span>
-								</h3>
-								<br>
-								<div class="">
-									<a class="btn btn-theme btn-sm btn-min-block" href="#"> COMPRAR 3</a>
-									<a class="btn btn-theme btn-sm btn-min-block" href="#"> LISTA DE SEGUIMIENTO 2</a>
-								</div>
+									<p id="descripcion">TERCERA DESCRIPCION....</p>
 							</div>
-						</div>
 					</div>
-				</div>
 				
 				<!-- CONTROLES LATERALES -->
 				
