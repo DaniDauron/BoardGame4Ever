@@ -29,6 +29,7 @@ public class VerListadoProductos extends HttpServlet {
 		
 		if( request.getParameter("tipo")!= null){
 			pagina = request.getParameter("tipo");
+			
 		}
 
 	
@@ -61,6 +62,9 @@ public class VerListadoProductos extends HttpServlet {
 			juegos = ListadoDao.recuperarListaPorDuracion("media");
 		}else if(pagina.equals("larga")){
 			juegos = ListadoDao.recuperarListaPorDuracion("larga");
+		}else if(pagina.equals("buscar")){
+			
+			juegos = ListadoDao.recuperarListaPorBusqueda(request.getParameter("busqueda"));
 		}
 		
 		

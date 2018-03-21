@@ -378,5 +378,52 @@ public class ListadoDao {
 
 		return listado;
 	}
+	
+	public static List recuperarListaPorBusqueda(String juego) {
+
+		List listado = new ArrayList();
+		String texto=null;
+		String[] cadena_busqueda = juego.split(" ");
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			for(int i=0; i<cadena_busqueda.length; i++){
+				texto = texto + " nombre LIKE(%" + cadena_busqueda[i] + "%)";
+				if(i != (cadena_busqueda.length)-1){
+					texto += " AND";
+				}
+			}
+			
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE" + texto;
+
+			rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				listado.add(x);
+			}
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return listado;
+	}
 
 }

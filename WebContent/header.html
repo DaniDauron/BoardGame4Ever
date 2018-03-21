@@ -3,7 +3,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.html""> <img alt="logo"
+			<a class="navbar-brand" href="index.html"> <img alt="logo"
 				src="./src/milogo.png" class="milogo">
 			</a>
 
@@ -19,11 +19,13 @@
 					</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Carrito</a>
 					</li>
-					<li class="nav-item"><img
-						src="https://smspubli.com/wp-content/uploads/2016/06/lupa-1.png"
-						alt="buscar" height="42" width="42"> <input id="mysearch"
-						type="search" placeholder="buscar" name="busqueda" /> <!--<input id="boton_ok" type="button" src="https://www.bglondon.com/images/snimki/symbol_ok5.png" />-->
-					</li>
+					<form>
+						<li class="nav-item">
+						<input src="https://smspubli.com/wp-content/uploads/2016/06/lupa-1.png"
+							alt="buscar" height="42" width="42" type="submit" action="./VerListado">
+							<input id="mysearch" type="search" placeholder="buscar" name="busqueda" /><input style="display:none" name="tipo" value="buscar"/> <!--<input id="boton_ok" type="button" src="https://www.bglondon.com/images/snimki/symbol_ok5.png" />-->
+						</li>
+					</form>
 				</ul>
 			</div>
 		</div>
