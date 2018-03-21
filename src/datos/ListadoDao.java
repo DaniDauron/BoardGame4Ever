@@ -35,8 +35,8 @@ public class ListadoDao {
 
 			String query = "SELECT id,nombre,precio,img from producto ";
 			rs = st.executeQuery(query);
-			
-		for (int i = 0; i < limite && rs.next(); i++) {
+
+			for (int i = 0; i < limite && rs.next(); i++) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
@@ -44,16 +44,16 @@ public class ListadoDao {
 				x.setImagen(rs.getString("img"));
 				slider.add(x);
 			}
-	
+
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
-			
+
 		}
 		return slider;
 	}
 
 	public static List recuperarElementoListado() {
-		
+
 		List slider = new ArrayList();
 		Producto x;
 
@@ -89,10 +89,10 @@ public class ListadoDao {
 		}
 		return slider;
 	}
-	
+
 	public static List recuperarListaNovedades() {
 
-		List slider = new ArrayList();
+		List listado = new ArrayList();
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -117,20 +117,19 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				listado.add(x);
 			}
-	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
 		}
 
-		return slider;
+		return listado;
 	}
 
 	public static List recuperarListaPorTipoTablero() {
 
-		List slider = new ArrayList();
+		List listado = new ArrayList();
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -155,20 +154,19 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				listado.add(x);
 			}
-	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
 		}
 
-		return slider;
+		return listado;
 	}
-	
+
 	public static List recuperarListaPorTipoDados() {
 
-		List slider = new ArrayList();
+		List listado = new ArrayList();
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -186,31 +184,26 @@ public class ListadoDao {
 
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Dados'";
 			rs = st.executeQuery(query);
-			
 
-		
 			while (rs.next()) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				listado.add(x);
 			}
-	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
-			
 		}
 
-		return slider;
-
+		return listado;
 	}
-	
+
 	public static List recuperarListaPorTipoCartas() {
 
-		List slider = new ArrayList();
+		List listado = new ArrayList();
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -228,31 +221,27 @@ public class ListadoDao {
 
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Cartas'";
 			rs = st.executeQuery(query);
-			
 
-		
 			while (rs.next()) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				listado.add(x);
 			}
-	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
-			
 		}
 
-		return slider;
-
+		return listado;
 	}
-	
-	public static List recuperarListaPorEdades(int edad) {
 
-		List slider = new ArrayList();
+	public static List recuperarListaPorEdades(String rango) {
+
+		List listado = new ArrayList();
+		String rango_edades=null;
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -268,36 +257,126 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query;
-			
-			if(edad < 4){
-				query = "SELECT id, nombre, precio, img FROM producto WHERE edad=" + edad;
-			}else{
-				query = "SELECT id, nombre, precio, img FROM producto WHERE edad>=" + edad;
+			if (rango == "ninios") {
+				rango_edades ="edad <= 10";
+			} else if (rango == "adolescentes") {
+				rango_edades ="edad > 10 AND edad <= 16";
+			} else if(rango == "adultos"){
+				rango_edades ="edad > 16";
 			}
-			
-			
-			rs = st.executeQuery(query);
-			
 
-		
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_edades;
+
+			rs = st.executeQuery(query);
+
 			while (rs.next()) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				listado.add(x);
 			}
-	
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
-			
 		}
 
-		return slider;
+		return listado;
+	}
 
+	public static List recuperarListaPorDuracion(String duracion) {
+
+		List listado = new ArrayList();
+		String rango_duracion=null;
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			if (duracion == "ligera") {
+				rango_duracion ="duracion < 30";
+			} else if (duracion == "media") {
+				rango_duracion ="duracion >= 30 AND duracion < 100";
+			} else if(duracion == "larga"){
+				rango_duracion ="duracion >= 100";
+			}
+
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_duracion;
+
+			rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				listado.add(x);
+			}
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return listado;
 	}
 	
+	public static List recuperarListaPorNumeroJugadores(int jugadores) {
+
+		List listado = new ArrayList();
+		String rango_jugadores=null;
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			if (jugadores == 2) {
+				rango_jugadores ="jug_min == 2";
+			} else if (jugadores == 3) {
+				rango_jugadores ="jug_min == 3";
+			} else if(jugadores > 3){
+				rango_jugadores ="jug_min > 3";
+			}
+			
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE edad>=" + rango_jugadores;
+
+			rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				listado.add(x);
+			}
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return listado;
+	}
+
 }
