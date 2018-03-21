@@ -11,9 +11,9 @@
 <title>Los mejores juegos de mesa</title>
 </head>
 <body>
-	<header>
-		<jsp:include page="./header.html" />
-	</header>
+
+	<jsp:include page="./header.html" />
+
 
 	<div class="container contenidoprincipal">
 

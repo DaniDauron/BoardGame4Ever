@@ -16,6 +16,7 @@ public class Producto {
 	private int tiempoEstimado;
 	private float precio;
 	private String imagen;
+	private String tipo;
 	
 	/*
 	 * Constructor y métodos.
@@ -121,11 +122,19 @@ public class Producto {
 		this.imagen = imagen;		
 	}
 
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+
 	@Override
 	public String toString() {
-		return "Producto [idProd=" + idProd + ", nombreProducto=" + nombreProducto + ", descripcion=" + descripcion
-				+ ", edad=" + edad + ", minJugadores=" + minJugadores + ", maxJugadores=" + maxJugadores
-				+ ", categoria=" + categoria + ", tiempoEstimado=" + tiempoEstimado + ", precio=" + precio + "]";
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
 
 	
