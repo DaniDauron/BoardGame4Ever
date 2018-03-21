@@ -17,8 +17,6 @@ public class ListadoDao {
 
 	public static List recuperarElementoListado(int limite) {
 
-		// TODO Auto-generated method stub
-
 		List slider = new ArrayList();
 
 		try {
@@ -38,9 +36,7 @@ public class ListadoDao {
 			String query = "SELECT id,nombre,precio,img from producto ";
 			rs = st.executeQuery(query);
 			
-
-		
-			for (int i = 0; i < limite && rs.next(); i++) {
+		for (int i = 0; i < limite && rs.next(); i++) {
 				Producto x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
@@ -49,20 +45,15 @@ public class ListadoDao {
 				slider.add(x);
 			}
 	
-
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
 			
 		}
-
 		return slider;
-
 	}
 
 	public static List recuperarElementoListado() {
-
-		// TODO Auto-generated method stub
-
+		
 		List slider = new ArrayList();
 		Producto x;
 
@@ -96,9 +87,217 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 			x = new Producto();
 		}
+		return slider;
+	}
+	
+	public static List recuperarListaNovedades() {
+
+		List slider = new ArrayList();
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			String query = "SELECT id, nombre, precio, img FROM producto ORDER BY publicacion DESC";
+			rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				slider.add(x);
+			}
+	
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return slider;
+	}
+
+	public static List recuperarListaPorTipoTablero() {
+
+		List slider = new ArrayList();
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Tablero'";
+			rs = st.executeQuery(query);
+
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				slider.add(x);
+			}
+	
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+		}
+
+		return slider;
+	}
+	
+	public static List recuperarListaPorTipoDados() {
+
+		List slider = new ArrayList();
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Dados'";
+			rs = st.executeQuery(query);
+			
+
+		
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				slider.add(x);
+			}
+	
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+			
+		}
 
 		return slider;
 
 	}
+	
+	public static List recuperarListaPorTipoCartas() {
 
+		List slider = new ArrayList();
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Cartas'";
+			rs = st.executeQuery(query);
+			
+
+		
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				slider.add(x);
+			}
+	
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+			
+		}
+
+		return slider;
+
+	}
+	
+	public static List recuperarListaPorEdades(int edad) {
+
+		List slider = new ArrayList();
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			String query;
+			
+			if(edad < 4){
+				query = "SELECT id, nombre, precio, img FROM producto WHERE edad=" + edad;
+			}else{
+				query = "SELECT id, nombre, precio, img FROM producto WHERE edad>=" + edad;
+			}
+			
+			
+			rs = st.executeQuery(query);
+			
+
+		
+			while (rs.next()) {
+				Producto x = new Producto();
+				x.setIdProd(rs.getInt("id"));
+				x.setNombreProducto(rs.getString("nombre"));
+				x.setPrecio(rs.getFloat("precio"));
+				x.setImagen(rs.getString("img"));
+				slider.add(x);
+			}
+	
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+			
+		}
+
+		return slider;
+
+	}
+	
 }
