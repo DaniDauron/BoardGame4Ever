@@ -21,7 +21,9 @@ public class Producto {
 	/*
 	 * Constructor y métodos.
 	 */
-	
+	{
+		this.imagen="./src/iamerror.png";
+	}
 	public Producto(){
 		
 	}
