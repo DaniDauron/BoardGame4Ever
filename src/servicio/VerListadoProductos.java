@@ -24,19 +24,43 @@ public class VerListadoProductos extends HttpServlet {
 
 		HttpSession sesion = request.getSession();
 		
-		List<Producto> juegos;
+		List<Producto> juegos = null;
 		String pagina="";
 		
-		if( request.getParameter("pagina")!= null){
-			pagina = request.getParameter("pagina");
+		if( request.getParameter("tipo")!= null){
+			pagina = request.getParameter("tipo");
 		}
 
 	
 		
-		if(pagina.equals("")){
-			 juegos = ListadoDao.recuperarElementoListado();			
-		}else{
-			juegos = ListadoDao.recuperarElementoListado(6);			
+		if(pagina.equals("todo")){
+			 juegos = ListadoDao.recuperarElementoListado();
+		}else if(pagina.equals("novedades")){
+			juegos = ListadoDao.recuperarListaNovedades();			
+		}else if(pagina.equals("tablero")){
+			juegos = ListadoDao.recuperarListaPorTipoTablero();
+		}else if(pagina.equals("dados")){
+			juegos = ListadoDao.recuperarListaPorTipoDados();
+		}else if(pagina.equals("cartas")){
+			juegos = ListadoDao.recuperarListaPorTipoCartas();
+		}else if(pagina.equals("parejas")){
+			juegos = ListadoDao.recuperarListaPorNumeroJugadores("parejas");
+		}else if(pagina.equals("trios")){
+			juegos = ListadoDao.recuperarListaPorNumeroJugadores("trios");
+		}else if(pagina.equals("multitud")){
+			juegos = ListadoDao.recuperarListaPorNumeroJugadores("multitud");
+		}else if(pagina.equals("ninios")){
+			juegos = ListadoDao.recuperarListaPorEdades("ninios");
+		}else if(pagina.equals("adolescentes")){
+			juegos = ListadoDao.recuperarListaPorEdades("adolescentes");
+		}else if(pagina.equals("adultos")){
+			juegos = ListadoDao.recuperarListaPorEdades("adultos");
+		}else if(pagina.equals("ligera")){
+			juegos = ListadoDao.recuperarListaPorDuracion("ligera");
+		}else if(pagina.equals("media")){
+			juegos = ListadoDao.recuperarListaPorDuracion("media");
+		}else if(pagina.equals("larga")){
+			juegos = ListadoDao.recuperarListaPorDuracion("larga");
 		}
 		
 		
