@@ -12,7 +12,12 @@ body {
 * {
 	font-family: "Arial";
 }
-
+.header_principal{
+	margin-bottom:30px;
+}
+.milogo{
+	width: 50%;
+}
 p, span {
 	font-size: 16px;
 }

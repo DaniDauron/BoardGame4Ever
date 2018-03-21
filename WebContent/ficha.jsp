@@ -13,9 +13,9 @@
 </head>
 <body>
 
-	<header>
-		<jsp:include page="./header.html" />
-	</header>
+
+	<jsp:include page="./header.html" />
+
 
 	<!-- Page Content -->
 	<div class="container  contenidoprincipal">
@@ -54,7 +54,7 @@
 
 
 								<h6>
-									<b>Tableros</b>
+									<b>Familia: ${producto.tipo}</b>
 								</h6>
 								<h6>
 									<b>Edad recomendada:</b> ${producto.edad}
