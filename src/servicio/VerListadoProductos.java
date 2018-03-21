@@ -62,8 +62,7 @@ public class VerListadoProductos extends HttpServlet {
 			juegos = ListadoDao.recuperarListaPorDuracion("media");
 		}else if(pagina.equals("larga")){
 			juegos = ListadoDao.recuperarListaPorDuracion("larga");
-		}else if(pagina.equals("buscar")){
-			
+		}else if(pagina.equals("buscar")){			
 			juegos = ListadoDao.recuperarListaPorBusqueda(request.getParameter("busqueda"));
 		}
 		
