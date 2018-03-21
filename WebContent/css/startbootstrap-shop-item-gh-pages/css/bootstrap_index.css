@@ -42,7 +42,7 @@
 .carousel-control .glyphicon-chevron-right,
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
-  position: absolute;
+  position: relative;
   top: 45%;
   z-index: 5;
   display: inline-block;
