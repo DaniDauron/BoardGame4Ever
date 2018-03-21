@@ -145,7 +145,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Tablero'";
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -182,7 +182,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Dados'";
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=2";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -219,7 +219,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo='Cartas'";
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=3";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -332,7 +332,7 @@ public class ListadoDao {
 		return listado;
 	}
 	
-	public static List recuperarListaPorNumeroJugadores(int jugadores) {
+	public static List recuperarListaPorNumeroJugadores(String jugadores) {
 
 		List listado = new ArrayList();
 		String rango_jugadores=null;
@@ -351,15 +351,15 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			if (jugadores == 2) {
-				rango_jugadores ="jug_min == 2";
-			} else if (jugadores == 3) {
-				rango_jugadores ="jug_min == 3";
-			} else if(jugadores > 3){
+			if (jugadores == "parejas") {
+				rango_jugadores ="jug_min = 2";
+			} else if (jugadores == "trios") {
+				rango_jugadores ="jug_min = 3";
+			} else if(jugadores == "multitud"){
 				rango_jugadores ="jug_min > 3";
 			}
 			
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE edad>=" + rango_jugadores;
+			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_jugadores;
 
 			rs = st.executeQuery(query);
 
