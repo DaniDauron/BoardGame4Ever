@@ -12,12 +12,15 @@ body {
 * {
 	font-family: "Arial";
 }
-.header_principal{
-	margin-bottom:30px;
+
+.header_principal {
+	margin-bottom: 30px;
 }
-.milogo{
+
+.milogo {
 	width: 50%;
 }
+
 p, span {
 	font-size: 16px;
 }
@@ -30,10 +33,15 @@ p, span {
 .nombre {
 	font-weight: bolder;
 	text-align: center;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .titulopagina {
 	padding-bottom: 50px;
+	font-family: "Bangers";
 }
 
 .img-fluid {
@@ -70,4 +78,9 @@ footer {
 
 .producto {
 	padding-bottom: 10px;
+}
+
+.titulo_sidebar {
+	font-family: "Bangers";
+	text-align: center;
 }
