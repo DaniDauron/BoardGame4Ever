@@ -400,14 +400,14 @@ public class ListadoDao {
 			st = con.createStatement();
 
 			for(int i=0; i<cadena_busqueda.length; i++){
-				texto = texto + " nombre LIKE(%" + cadena_busqueda[i] + "%)";
+				texto = texto + " nombre LIKE'%" + cadena_busqueda[i] + "%'";
 				if(i != (cadena_busqueda.length)-1){
 					texto += " AND";
 				}
 			}
 			
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE" + texto;
-
+System.out.println(query);
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
