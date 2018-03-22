@@ -43,9 +43,20 @@
 										<h4 style="text-align: right;">
 											<fmt:formatNumber type="currency" value="${producto.precio}" />
 										</h4>
-										<button style="text-align: right;" type="button"
-											class="btn btn-primary">Comprar</button>
+										
+										<c:if test="${producto.stock > 0}">
+									<div class="offset-1 col-lg-4 ">
+										<button type="button" class="btn btn-warning">Comprar</button>
 									</div>
+								</c:if>
+								
+								<c:if test="${producto.stock <= 0}">
+									<div class="offset-1 col-lg-4 ">
+										<button type="button" class="btn">Sin Stock</button>
+									</div>
+								</c:if>
+								
+										
 								</div>
 							</div>
 						</div>
