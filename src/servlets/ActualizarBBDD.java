@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import modelo.Producto;
+
 @WebServlet(urlPatterns={"/InsertaRegistro"})
 public class ActualizarBBDD extends HttpServlet {
 
@@ -19,6 +21,18 @@ public class ActualizarBBDD extends HttpServlet {
 		
 		HttpSession sesion = request.getSession();
 		
+		Producto prod = new Producto();
+		
+		prod.setNombreProducto(request.getParameter("nombreProd"));
+		//prod.setEdad(request.getParameter("edad"));
+		prod.setTipo(request.getParameter("tipo"));
+		//prod.setMaxJugadores(request.getParameter("maxJug"));
+		//prod.setMinJugadores(request.getParameter("minJug"));
+		//prod.setPrecio(request.getParameter("precio"));
+		//prod.setTiempoEstimado(request.getParameter("duracion"));
+		prod.setImagen(request.getParameter("urlImg"));
+		prod.setDescripcion(request.getParameter("descripcion"));
+			
 		RequestDispatcher view = request.getRequestDispatcher("gestion.jsp");
 		view.forward(request, response);
 		

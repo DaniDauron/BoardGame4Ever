@@ -24,7 +24,7 @@
           <div class="form-group">
             <label class=" control-label" for="textinput"><strong>Nombre del producto</strong></label>  
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="nombreProd"  class="form-control input-md" type="text">
               </div>
           </div>
 
@@ -32,7 +32,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la edad:</strong></label>
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="edad"  class="form-control input-md" type="text">
               </div>
           </div>
 
@@ -40,7 +40,7 @@
           <div class="form-group">
             <label class="control-label" for="selectbasic"><strong>Indica el tipo de juego:</strong></label>
             <div class="">
-              <select id="selectbasic" name="selectbasic" class="form-control">
+              <select id="selectbasic" name="tipo" class="form-control">
                 <option value="0">-----</option>
                 <option value="1">Dados</option>
                 <option value="2">Tableros</option>
@@ -53,7 +53,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong> Nº Jugadores maximo: </strong></label>
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="maxJug"  class="form-control input-md" type="text">
               </div>
           </div>
           
@@ -61,7 +61,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Nº Jugadores minimo:</strong></label>
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="minJug"  class="form-control input-md" type="text">
               </div>
           </div>
           
@@ -69,7 +69,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica el precio:</strong></label>
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="precio"  class="form-control input-md" type="text">
               </div>
           </div>
 		
@@ -77,7 +77,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la duracion del juego (minutos):</strong></label>
             <div class="">
-              <input id="textinput" name="textinput"  class="form-control input-md" type="text">
+              <input id="textinput" name="duracion"  class="form-control input-md" type="text">
              </div>
           </div>
       
@@ -85,7 +85,7 @@
           <div class="form-group">
             <label class=" control-label" for="filebutton"><strong>Imagen a subir:</strong></label>
             <div class="">
-              <input id="filebutton" name="filebutton" class="input-file" type="file">
+              <input id="filebutton" name="urlImg" class="input-file" type="file">
             </div>
           </div>
         <button class="btn btn-default" type="button">Subir</button>
@@ -93,7 +93,7 @@
           <div class="form-group">
             <label class=" control-label" for="textarea"><strong>Indica una pequeña descripcion: </strong></label>
             <div class="">                     
-              <textarea class="form-control" id="textarea" name="textarea">Introduce el texo que quieras</textarea>
+              <textarea class="form-control" id="descripcion" name="textarea">Introduce el texo que quieras</textarea>
             </div>
           </div>
  		
