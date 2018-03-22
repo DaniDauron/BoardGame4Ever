@@ -1,4 +1,4 @@
-package servicio;
+package servlets;
 
 import java.io.IOException;
 
