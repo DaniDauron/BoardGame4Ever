@@ -3,7 +3,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="VerListado?tipo=todo"> <img
+			<a class="navbar-brand" href="zona_admin.jsp"> <img
 				alt="logo" src="./src/milogo.png" class="milogo">
 			</a>
 			

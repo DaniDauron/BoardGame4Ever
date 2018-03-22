@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 			logeado = false;
 		}
 						
-			HttpSession sesion = request.getSession();		
+			HttpSession sesion = request.getSession(false);		
 			sesion.setAttribute("admin", usuario);
 			
 			if(usuario != null){

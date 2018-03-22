@@ -18,7 +18,7 @@
 
 <c:if test="${admin.logeado == false or empty admin}">
 		<c:redirect url="zona_admin.jsp" />
-	</c:if>
+</c:if>
 
 	
 	<c:if test="${admin.logeado == true}">
