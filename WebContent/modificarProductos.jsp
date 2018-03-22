@@ -17,7 +17,7 @@
 	<div class="container auth">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
-			<form>
+			<form action="ListadoAdmin">
 				
 				<!-- Nombre del producto-->
 				<div class="form-group">
@@ -116,7 +116,7 @@
 				<!-- BOTONES Guardar -->
 				<div class="form-group">
 					<div class="">
-						<button id="button1id" name="button1id" class="btn btn-success"><strong>Guardar Cambios</strong></button>
+						<button id="button1id" name="button1id" type="submit" class="btn btn-success"><strong>Guardar Cambios</strong></button>
 					</div>
 				</div>
 			</form>
