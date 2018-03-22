@@ -85,7 +85,14 @@ footer {
 	text-align: center;
 }
 
+#mysearch{
+	width: 70%;
+}
 
+.botonBuscar{
+	float:left;
+	height: auto;
+}
 
 #custom-search-input{
     padding: 3px;

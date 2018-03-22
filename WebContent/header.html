@@ -3,7 +3,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.jsp"> <img alt="logo"
+			<a class="navbar-brand" href="VerListado?tipo=todo"> <img alt="logo"
 				src="./src/milogo.png" class="milogo">
 			</a>
 
@@ -21,21 +21,9 @@
 					</li>
 				</ul>
 				<form id="formbuscar" action="VerListado">
-
-					<div id="custom-search-input">
-						<div class="input-group col-md-12">
-							<input type="text" class="form-control input-lg"
-								placeholder="Buscar" /> <span class="input-group-btn">
-								<button class="btn btn-info btn-lg" type="button">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-
-					
-
-
+					<input src="https://smspubli.com/wp-content/uploads/2016/06/lupa-1.png"	alt="buscar" height="31" width="31" type="image"   class="botonBuscar">					
+					<input style="display:none" name="tipo" value="buscar" /> 
+					<input	id="mysearch" type="search" placeholder="Buscar..."	name="busqueda" class="form-control form-control-sm" />
 				</form>
 
 			</div>
