@@ -17,7 +17,7 @@
 
 
 	<c:if test="${admin.logeado == true}">
-		<c:redirect url="./gestion.jsp" />
+		<c:redirect url="ListadoAdmin" />
 	</c:if>
 
 	<c:if test="${admin.logeado == false or empty admin}">
@@ -28,7 +28,7 @@
 			<header>
 				<h2>Inicie Sesion</h2>
 			</header>
-			<form action="Loging" method="post">
+			<form action="Login" method="post">
 				<div class="form-group">
 					<div class="row">
 						<div class="col-sm-2 col-xs-12">

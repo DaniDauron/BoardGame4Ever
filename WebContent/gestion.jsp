@@ -67,7 +67,6 @@
 					<div class="col-sm-2">
 						<button type="button" class="btn btn-light">Eliminar</button>
 					</div>
-
 				</div>
 			</c:forEach>
 		</div>
