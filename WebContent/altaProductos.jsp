@@ -14,7 +14,7 @@
 <div class="container auth">
     <h1 class="text-center"> ALTA PRODUCTOS  </h1>
     <div id="big-form" class="well auth-box">
-      <form action="InsertaRegistro">
+      <form action="InsertaRegistro"> 
         <fieldset>
 <!--Obciones producto-->
           <legend><strong>Introduce los siguientes datos para el alta del producto:</strong></legend>
