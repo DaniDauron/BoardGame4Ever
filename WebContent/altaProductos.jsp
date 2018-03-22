@@ -100,7 +100,9 @@
  		<!-- BOTONES ALTA Y MODIFICAR -->
           <div class="form-group">
               <div class="">
-              <button id="button1id" name="button1id" class="btn btn-success"><strong>Subir Producto</strong></button>
+              <form action="InsertaRegistro">
+              <button id="button1id" name="button1id" class="btn btn-success" type="submit"><strong>Subir Producto</strong></button>
+              </form>
            </div>
           </div>
       
