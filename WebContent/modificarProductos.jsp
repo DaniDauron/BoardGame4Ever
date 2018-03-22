@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
+
 <link href="./css/formularios.css" rel="stylesheet" type="text/css">
 <jsp:include page="./imports_comunes.html" />
 
 <link
-	href="//netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	href="//netdna.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
 </head>
-<body>
 
+<body>
 	<div class="container auth">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
@@ -21,7 +21,7 @@
 				
 				<!-- Nombre del producto-->
 				<div class="form-group">
-					<label class=" control-label" for="textinput"><strong>Indica el nuevo Nombre del producto</strong></label>
+					<label class="control-label" for="textinput"><strong>Indica el nuevo Nombre del producto</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -56,7 +56,7 @@
 			
 				<!-- Jugadores Max-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong> Nº Jugadores máximo:</strong></label>
+					<label class=" control-label" for="passwordinput"><strong> NÂº Jugadores mÃ¡ximo:</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -66,7 +66,7 @@
 
 				<!-- Jugadores min-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
+					<label class=" control-label" for="passwordinput"><strong>NÂº Jugadores mÃ­nimo:</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -86,7 +86,7 @@
 
 				<!-- Duracion-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong>Indica la duración del juego (minutos):</strong></label>
+					<label class=" control-label" for="passwordinput"><strong>Indica la duraciÃ³n del juego (minutos):</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -106,7 +106,7 @@
 
 				<!-- Descripcion -->
 				<div class="form-group">
-					<label class=" control-label" for="textarea"><strong>Indica una pequeña descripción:</strong> </label>
+					<label class=" control-label" for="textarea"><strong>Indica una pequeÃ±a descripciÃ³n:</strong> </label>
 					<div class="">
 						<textarea class="form-control" id="textarea" name="textarea">Introduce el texo que quieras</textarea>
 					</div>
@@ -122,5 +122,8 @@
 			</form>
 		</div>
 	</div>
-</body>
+	
+	<jsp:include page="./footer.html" />
+	</body>
+	
 </html>
