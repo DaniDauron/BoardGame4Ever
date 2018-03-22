@@ -69,8 +69,13 @@
 					</div>
 
 					<div class="col-sm-2">
-						<button type="button" class="btn btn-light">Modificar</button>
+					<form action="modificarProductos"> 
+						<button type="submit" class="btn btn-light">Modificar</button>
+						</form>
 					</div>
+					
+					
+					
 					<div class="col-sm-2">
 					
 						<button type="button" class="btn btn-light">Eliminar</button>
