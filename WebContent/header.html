@@ -19,16 +19,25 @@
 					</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Carrito</a>
 					</li>
-					<form action="VerListado">
-						<li class="nav-item">
-						<input src="https://smspubli.com/wp-content/uploads/2016/06/lupa-1.png"	alt="buscar" height="42" width="42" type="image" >
-						  <input style="display:none" name="tipo" value="buscar"/>
-							<input id="mysearch" type="search" placeholder="Busca aqui tu juego" name="busqueda" />
-							 
-							<!--<input id="boton_ok" type="button" src="https://www.bglondon.com/images/snimki/symbol_ok5.png" />-->
-						</li>
-					</form>
 				</ul>
+				<form id="formbuscar" action="VerListado">
+
+					<div id="custom-search-input">
+						<div class="input-group col-md-12">
+							<input type="text" class="form-control input-lg"
+								placeholder="Buscar" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+
+					
+
+
+				</form>
+
 			</div>
 		</div>
 	</nav>

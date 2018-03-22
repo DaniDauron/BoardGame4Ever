@@ -41,7 +41,7 @@
 								<p class="nombre">${juego.nombreProducto}</p>
 								<fmt:setLocale value="es_ES" />
 								<p class="precio">
-									<fmt:formatNumber type="currency" value="${juego.precio}" />
+									<fmt:formatNumber type="currency" value="${juego.precio} " />
 								</p>
 								<div class="row">
 								
@@ -53,7 +53,7 @@
 								
 								<c:if test="${juego.stock <= 0}">
 									<div class="offset-1 col-lg-4 ">
-										<button type="button" class="btn">Sin Stock ${juego.stock}</button>
+										<button type="button" class="btn">Sin Stock</button>
 									</div>
 								</c:if>
 								

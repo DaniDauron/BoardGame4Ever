@@ -73,7 +73,7 @@ public class ListadoDao {
 
 	public static List recuperarElementoListado() {
 
-		List slider = new ArrayList();
+		List listado = new ArrayList();
 		Producto x;
 
 		try {
@@ -90,7 +90,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id,nombre,precio,img from producto ";
+			String query = "SELECT id,nombre,precio,img, stock  from producto ";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -99,7 +99,8 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
-				slider.add(x);
+				x.setStock(rs.getInt("stock"));
+				listado.add(x);
 			}
 
 		} catch (Exception a) {
@@ -123,7 +124,7 @@ public class ListadoDao {
 			}
 		}
 		
-		return slider;
+		return listado;
 		
 	}
 
