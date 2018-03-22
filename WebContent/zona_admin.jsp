@@ -12,8 +12,6 @@
 
 <body>
 	<jsp:include page="./header.html" />
-
-
 	<div class="container  contenidoprincipal">
 
 		<form action="/action_page.php">
