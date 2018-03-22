@@ -26,6 +26,7 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
 		Usuario usuario= new UsuarioAdmin(request.getParameter("usuario"), request.getParameter("pass"));		
 		boolean logeado = ServicioUsuarios.LogearUsuario(usuario);
 		

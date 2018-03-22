@@ -24,11 +24,11 @@
 
 	
 		<div class="container  contenidoprincipal">
-		<div>HOLA SOY: ${admin.usuario}</div>
+	
 			<header>
 				<h2>Inicie Sesion</h2>
 			</header>
-			<form action="Login">
+			<form action="Login" method="post">
 				<div class="form-group">
 					<div class="row">
 						<div class="col-sm-2 col-xs-12">
