@@ -11,8 +11,6 @@ public class ProductoDao {
 
 	public static Producto recuperarJuego(String numero) {
 
-
-
 		Connection con = null;
 		Statement st = null;
 		ResultSet rs = null;

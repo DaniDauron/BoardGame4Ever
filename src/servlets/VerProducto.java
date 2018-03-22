@@ -1,4 +1,4 @@
-package servicio;
+package servlets;
 
 import java.io.IOException;
 
@@ -34,12 +34,9 @@ public class VerProducto extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
 		String numero = request.getParameter("juego");
 		if (numero != null) {
-			System.out.println("111111");
 			Producto juego = ProductoDao.recuperarJuego(numero);
-			System.out.println(juego.toString());
 			request.setAttribute("producto", juego);
 		}
 

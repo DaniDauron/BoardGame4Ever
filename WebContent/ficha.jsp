@@ -43,63 +43,62 @@
 										<h4 style="text-align: right;">
 											<fmt:formatNumber type="currency" value="${producto.precio}" />
 										</h4>
-										
+
 										<c:if test="${producto.stock > 0}">
-									<div class="offset-1 col-lg-4 ">
-										<button type="button" class="btn btn-warning">Comprar</button>
+											<div class="offset-1 col-lg-4 ">
+												<button type="button" class="btn btn-warning">Comprar</button>
+											</div>
+										</c:if>
+
+										<c:if test="${producto.stock <= 0}">
+											<div class="offset-1 col-lg-4 ">
+												<button type="button" class="btn">Sin Stock</button>
+											</div>
+										</c:if>
+
+
 									</div>
-								</c:if>
-								
-								<c:if test="${producto.stock <= 0}">
-									<div class="offset-1 col-lg-4 ">
-										<button type="button" class="btn">Sin Stock</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="card-body offset-1 col-sm-12">
+
+
+									<h6>
+										<b>Familia: ${producto.tipo}</b>
+									</h6>
+									<h6>
+										<b>Edad recomendada:</b> ${producto.edad}
+									</h6>
+									<h6>
+										<b>Número de jugadores</b> ${producto.minJugadores} -
+										${producto.maxJugadores}
+									</h6>
+									<h6>
+										<b>Duración de partida:</b> ${producto.tiempoEstimado}
+									</h6>
+									<div class="card-text">
+										<h6>
+											<b>Descripción: </b>
+										</h6>
+										${producto.descripcion}
 									</div>
-								</c:if>
-								
-										
+									<!--<span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars-->
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="card-body offset-1 col-sm-12">
-
-
-								<h6>
-									<b>Familia: ${producto.tipo}</b>
-								</h6>
-								<h6>
-									<b>Edad recomendada:</b> ${producto.edad}
-								</h6>
-								<h6>
-									<b>Número de jugadores</b> ${producto.minJugadores} -
-									${producto.maxJugadores}
-								</h6>
-								<h6>
-									<b>Duración de partida:</b> ${producto.tiempoEstimado}
-								</h6>
-								<p class="card-text">
-								<h6>
-									<b>Descripción: </b>
-								</h6>
-								${producto.descripcion}
-								</p>
-								<!--<span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-              4.0 stars-->
-							</div>
-						</div>
 					</div>
+
 				</div>
+				<!-- /.col-lg-9 -->
 
 			</div>
-			<!-- /.col-lg-9 -->
 
 		</div>
-
-	</div>
-	<!-- /.container -->
+		<!-- /.container -->
 
 
-	<jsp:include page="./footer.html" />
-
+		<jsp:include page="./footer.html" />
 </body>
 </html>

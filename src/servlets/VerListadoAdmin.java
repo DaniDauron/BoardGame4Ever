@@ -1,4 +1,4 @@
-package servicio;
+package servlets;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,19 +24,8 @@ public class VerListadoAdmin extends HttpServlet {
 		HttpSession sesion = request.getSession();
 		
 		List<Producto> juegos = null;
-		String pagina="";
 		
-		
-		if(request.getParameter("listadoadmin") != null){
-			pagina = request.getParameter("listadoadmin");
-		}
-		
-		
-		if(pagina.equals("principal")){
-			juegos = ListadoAdminDao.recuperaElmentoListadoAdmin();
-			request.setAttribute("tituloPagina", "Productos disponibles en la tienda");
-		}
-		
+		juegos = ListadoAdminDao.recuperaElmentoListadoAdmin();
 		
 		sesion.setAttribute("listadoAdmin", juegos);
 		
@@ -47,19 +36,19 @@ public class VerListadoAdmin extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		processRequest(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		processRequest(req, resp);
 	}
 
 	@Override
 	public String getServletInfo() {
-		// TODO Auto-generated method stub
+
 		return super.getServletInfo();
 	}
 	
