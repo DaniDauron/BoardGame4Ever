@@ -12,9 +12,7 @@
 </head>
 
 <body>
-	<jsp:include page="./header.html" />
-
-
+	<jsp:include page="./headeradmin.jsp" />
 
 	<c:if test="${admin.logeado == true}">
 		<c:redirect url="ListadoAdmin" />
