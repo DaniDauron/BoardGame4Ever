@@ -3,6 +3,7 @@ package datos;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,23 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 
 		}
+
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
 		return slider;
 	}
 
@@ -88,7 +106,25 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 			x = new Producto();
 		}
+		
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return slider;
+		
 	}
 
 	public static List recuperarListaNovedades() {
@@ -125,6 +161,22 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
@@ -162,6 +214,22 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
@@ -199,6 +267,22 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
@@ -236,13 +320,29 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
 	public static List recuperarListaPorEdades(String rango) {
 
 		List listado = new ArrayList();
-		String rango_edades=null;
+		String rango_edades = null;
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -259,11 +359,11 @@ public class ListadoDao {
 			st = con.createStatement();
 
 			if (rango == "ninios") {
-				rango_edades ="edad <= 10";
+				rango_edades = "edad <= 10";
 			} else if (rango == "adolescentes") {
-				rango_edades ="edad > 10 AND edad <= 16";
-			} else if(rango == "adultos"){
-				rango_edades ="edad > 16";
+				rango_edades = "edad > 10 AND edad <= 16";
+			} else if (rango == "adultos") {
+				rango_edades = "edad > 16";
 			}
 
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_edades;
@@ -283,13 +383,29 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
 	public static List recuperarListaPorDuracion(String duracion) {
 
 		List listado = new ArrayList();
-		String rango_duracion=null;
+		String rango_duracion = null;
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -306,11 +422,11 @@ public class ListadoDao {
 			st = con.createStatement();
 
 			if (duracion == "ligera") {
-				rango_duracion ="duracion < 30";
+				rango_duracion = "duracion < 30";
 			} else if (duracion == "media") {
-				rango_duracion ="duracion >= 30 AND duracion < 100";
-			} else if(duracion == "larga"){
-				rango_duracion ="duracion >= 100";
+				rango_duracion = "duracion >= 30 AND duracion < 100";
+			} else if (duracion == "larga") {
+				rango_duracion = "duracion >= 100";
 			}
 
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_duracion;
@@ -330,13 +446,29 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
-	
+
 	public static List recuperarListaPorNumeroJugadores(String jugadores) {
 
 		List listado = new ArrayList();
-		String rango_jugadores=null;
+		String rango_jugadores = null;
 
 		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
@@ -353,13 +485,13 @@ public class ListadoDao {
 			st = con.createStatement();
 
 			if (jugadores == "parejas") {
-				rango_jugadores ="jug_min = 2";
+				rango_jugadores = "jug_min = 2";
 			} else if (jugadores == "trios") {
-				rango_jugadores ="jug_min = 3";
-			} else if(jugadores == "multitud"){
-				rango_jugadores ="jug_min > 3";
+				rango_jugadores = "jug_min = 3";
+			} else if (jugadores == "multitud") {
+				rango_jugadores = "jug_min > 3";
 			}
-			
+
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_jugadores;
 
 			rs = st.executeQuery(query);
@@ -379,11 +511,11 @@ public class ListadoDao {
 
 		return listado;
 	}
-	
+
 	public static List recuperarListaPorBusqueda(String juego) {
 
 		List listado = new ArrayList();
-		String texto="";
+		String texto = "";
 		String[] cadena_busqueda = juego.split(" ");
 
 		try {
@@ -400,15 +532,15 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			for(int i=0; i<cadena_busqueda.length; i++){
+			for (int i = 0; i < cadena_busqueda.length; i++) {
 				texto = texto + " nombre LIKE '%" + cadena_busqueda[i] + "%'";
-				if(i != (cadena_busqueda.length)-1){
+				if (i != (cadena_busqueda.length) - 1) {
 					texto += " AND";
 				}
 			}
-			
+
 			String query = "SELECT id, nombre, precio, img FROM producto WHERE" + texto;
-			
+
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -424,6 +556,22 @@ public class ListadoDao {
 			System.out.println("error es " + a.getMessage());
 		}
 
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		return listado;
 	}
 
