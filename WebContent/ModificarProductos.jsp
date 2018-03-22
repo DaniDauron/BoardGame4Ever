@@ -52,10 +52,11 @@
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
 				</div>
-
+			
+			
 				<!-- Jugadores Max-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong> Nº Jugadores maximo:</strong></label>
+					<label class=" control-label" for="passwordinput"><strong> Nº Jugadores máximo:</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -65,7 +66,7 @@
 
 				<!-- Jugadores min-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong>Nº Jugadores minimo:</strong></label>
+					<label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -85,7 +86,7 @@
 
 				<!-- Duracion-->
 				<div class="form-group">
-					<label class=" control-label" for="passwordinput"><strong>Indica la duracion del juego (minutos):</strong></label>
+					<label class=" control-label" for="passwordinput"><strong>Indica la duración del juego (minutos):</strong></label>
 					<div class="">
 						<input id="textinput" name="textinput"
 							class="form-control input-md" type="text">
@@ -108,8 +109,8 @@
 					<label class=" control-label" for="textarea"><strong>Indica una pequeña descripción:</strong> </label>
 					<div class="">
 						<textarea class="form-control" id="textarea" name="textarea">Introduce el texo que quieras</textarea>
-						<button class="btn btn-default" type="button">Modificar</button>
 					</div>
+					<button class="btn btn-default" type="button">Modificar</button>
 				</div>
 
 				<!-- BOTONES Guardar -->
