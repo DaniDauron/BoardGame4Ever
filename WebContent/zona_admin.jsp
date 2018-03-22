@@ -46,7 +46,7 @@
 							<input type="password" class="form-control" id="pass" name="pass">
 						</div>
 					</div>
-
+				<input style="display:none" name="tipo_login" value="login" /> 
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>

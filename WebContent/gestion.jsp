@@ -13,9 +13,15 @@
 </head>
 
 <body>
-<jsp:include page="./headeradmin.jsp" />
+	<jsp:include page="./headeradmin.jsp" />
 
 
+<c:if test="${admin.logeado == false or empty admin}">
+		<c:redirect url="zona_admin.jsp" />
+	</c:if>
+
+	
+	<c:if test="${admin.logeado == true}">
 	<div class="container  contenidoprincipal">
 
 		<div class="row titulo">
@@ -50,11 +56,11 @@
 			<c:forEach var="juego" items="${listadoAdmin}">
 				<div class="row">
 					<div class="col-sm-1">
-					<span>${juego.idProd}</span>
+						<span>${juego.idProd}</span>
 					</div>
 
 					<div class="col-sm-5">
-						<p class="nombre">${juego.nombreProducto}</p>						
+						<p class="nombre">${juego.nombreProducto}</p>
 					</div>
 
 					<div class="col-sm-2">
@@ -71,7 +77,7 @@
 			</c:forEach>
 		</div>
 	</div>
-
+	</c:if>
 
 
 	<jsp:include page="./footer.html" />

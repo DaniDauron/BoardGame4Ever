@@ -9,7 +9,15 @@
 			
 
 				<c:if test="${admin.logeado == true}">
-					<button type="button" class="btn">Log Out</button>
+				
+				
+				<form id="formbuscar" action="Login">									
+					<input style="display:none" name="tipo_login" value="logout" /> 	
+					<button type="submit" class="btn">Log Out</button>
+				</form>
+				
+				
+					
 				</c:if>
 
 			</div>
