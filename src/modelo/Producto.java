@@ -17,6 +17,7 @@ public class Producto {
 	private float precio;
 	private String imagen;
 	private String tipo;
+	private int stock;
 	
 	/*
 	 * Constructor y métodos.
@@ -131,7 +132,15 @@ public class Producto {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
+		
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
 
 	@Override
 	public String toString() {
