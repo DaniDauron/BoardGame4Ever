@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link href="./formularios.css" rel="stylesheet" type="text/css">
+<link href="./css/formularios.css" rel="stylesheet" type="text/css">
 
 <jsp:include page="./imports_comunes.html" />
 <link href="//netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -110,7 +110,5 @@
     </div>
     <div class="clearfix"></div>
   </div>
-
-
 	</body>
 </html>
