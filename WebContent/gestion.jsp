@@ -33,8 +33,9 @@
 		<div class="container botonAlta">
 			<div class="row">
 				<div class="col-lg-4">
-					<button type="button" class="btn btn-primary">ALTA</button>
-
+				<form action="AltaProductos">
+					<button type="submit" class="btn btn-primary">ALTA</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -71,7 +72,9 @@
 						<button type="button" class="btn btn-light">Modificar</button>
 					</div>
 					<div class="col-sm-2">
+					
 						<button type="button" class="btn btn-light">Eliminar</button>
+						
 					</div>
 				</div>
 			</c:forEach>
