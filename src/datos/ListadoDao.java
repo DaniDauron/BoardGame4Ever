@@ -146,7 +146,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto ORDER BY publicacion DESC";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto ORDER BY publicacion DESC";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -155,6 +155,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -199,7 +200,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=1";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -208,6 +209,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -252,7 +254,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=2";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=2";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -261,6 +263,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -305,7 +308,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE tipo=3";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=3";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -314,6 +317,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -367,7 +371,7 @@ public class ListadoDao {
 				rango_edades = "edad > 16";
 			}
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_edades;
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_edades;
 
 			rs = st.executeQuery(query);
 
@@ -377,6 +381,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -430,7 +435,7 @@ public class ListadoDao {
 				rango_duracion = "duracion >= 100";
 			}
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_duracion;
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_duracion;
 
 			rs = st.executeQuery(query);
 
@@ -440,6 +445,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -493,7 +499,7 @@ public class ListadoDao {
 				rango_jugadores = "jug_min > 3";
 			}
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE " + rango_jugadores;
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_jugadores;
 
 			rs = st.executeQuery(query);
 
@@ -503,6 +509,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
@@ -540,7 +547,7 @@ public class ListadoDao {
 				}
 			}
 
-			String query = "SELECT id, nombre, precio, img FROM producto WHERE" + texto;
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE" + texto;
 
 			rs = st.executeQuery(query);
 
@@ -550,6 +557,7 @@ public class ListadoDao {
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setPrecio(rs.getFloat("precio"));
 				x.setImagen(rs.getString("img"));
+				x.setStock(rs.getInt("stock"));
 				listado.add(x);
 			}
 
