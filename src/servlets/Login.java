@@ -35,7 +35,7 @@ public class Login extends HttpServlet {
 		
 		
 		if(logeado){
-			RequestDispatcher view = request.getRequestDispatcher("gestion.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("ListadoAdmin");
 			view.forward(request, response);
 		}else{
 			RequestDispatcher view = request.getRequestDispatcher("zona_admin.jsp");

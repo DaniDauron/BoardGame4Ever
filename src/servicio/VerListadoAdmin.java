@@ -24,19 +24,8 @@ public class VerListadoAdmin extends HttpServlet {
 		HttpSession sesion = request.getSession();
 		
 		List<Producto> juegos = null;
-		String pagina="";
 		
-		
-		if(request.getParameter("listadoadmin") != null){
-			pagina = request.getParameter("listadoadmin");
-		}
-		
-		
-		if(pagina.equals("principal")){
-			juegos = ListadoAdminDao.recuperaElmentoListadoAdmin();
-			request.setAttribute("tituloPagina", "Productos disponibles en la tienda");
-		}
-		
+		juegos = ListadoAdminDao.recuperaElmentoListadoAdmin();
 		
 		sesion.setAttribute("listadoAdmin", juegos);
 		

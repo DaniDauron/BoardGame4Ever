@@ -28,7 +28,7 @@
 			<header>
 				<h2>Inicie Sesion</h2>
 			</header>
-			<form action="Login" method="post">
+			<form action="Loging" method="post">
 				<div class="form-group">
 					<div class="row">
 						<div class="col-sm-2 col-xs-12">
