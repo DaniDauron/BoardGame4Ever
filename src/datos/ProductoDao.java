@@ -11,7 +11,7 @@ public class ProductoDao {
 
 	public static Producto recuperarJuego(String numero) {
 
-		// TODO Auto-generated method stub
+
 
 		Connection con = null;
 		Statement st = null;

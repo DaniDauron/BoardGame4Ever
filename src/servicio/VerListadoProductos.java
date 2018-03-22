@@ -93,19 +93,19 @@ public class VerListadoProductos extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		processRequest(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		processRequest(req, resp);
 	}
 
 	@Override
 	public String getServletInfo() {
-		// TODO Auto-generated method stub
+		
 		return super.getServletInfo();
 	}
 	
