@@ -1,3 +1,4 @@
+
 package datos;
 
 import java.sql.Connection;
@@ -9,9 +10,9 @@ import modelo.Usuario;
 
 public class UsuarioDao implements I_Usuario {
 
-	Connection con = null;
-	Statement st = null;
-	ResultSet rs = null;
+	private Connection con = null;
+	private Statement st = null;
+	private ResultSet rs = null;
 
 	@Override
 	public void Login(UsuarioDao u) {
