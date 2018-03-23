@@ -51,7 +51,7 @@
   		
   		<!-- Jugadores Max-->
           <div class="form-group">
-            <label class=" control-label" for="passwordinput"><strong> Nº Jugadores maximo: </strong></label>
+            <label class=" control-label" for="passwordinput"><strong> Nº Jugadores máximo: </strong></label>
             <div class="">
               <input id="textinput" name="maxJug"  class="form-control input-md" type="text">
               </div>
@@ -59,7 +59,7 @@
           
           <!-- Jugadores min-->
           <div class="form-group">
-            <label class=" control-label" for="passwordinput"><strong>Nº Jugadores minimo:</strong></label>
+            <label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
             <div class="">
               <input id="textinput" name="minJug"  class="form-control input-md" type="text">
               </div>
@@ -75,7 +75,7 @@
 		
 		  <!-- Duracion-->
           <div class="form-group">
-            <label class=" control-label" for="passwordinput"><strong>Indica la duracion del juego (minutos):</strong></label>
+            <label class=" control-label" for="passwordinput"><strong>Indica la duración del juego (minutos):</strong></label>
             <div class="">
               <input id="textinput" name="duracion"  class="form-control input-md" type="text">
              </div>
@@ -91,7 +91,7 @@
           </div> 
            <!-- Imagen URL-->
           <div class="form-group">
-            <label class=" control-label" for="passwordinput"><strong>Indica la direccion url de la imagen:</strong></label>
+            <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
             <div class="">
               <input id="textinput" name="url"  class="form-control input-md" type="text">
               </div>
@@ -106,7 +106,7 @@
           </div>
           <!-- Descripcion -->
           <div class="form-group">
-            <label class=" control-label" for="textarea"><strong>Indica una pequeña descripcion: </strong></label>
+            <label class=" control-label" for="textarea"><strong>Indica una pequeña descripción: </strong></label>
             <div class="">                     
               <textarea class="form-control" id="descripcion" name="textarea">Introduce el texo que quieras</textarea>
             </div>
