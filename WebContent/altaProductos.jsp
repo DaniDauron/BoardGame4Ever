@@ -81,14 +81,7 @@
              </div>
           </div>
       
-         <!-- OPCION SUBIR IMAGEN --> 
-          <div class="form-group">
-            <label class=" control-label" for="filebutton"><strong>Imagen a subir desde el equipo:</strong></label>
-            <div class="">
-              <input id="filebutton" name="urlImg" class="input-file" type="file">
-            </div>
-             <button class="btn btn-default" type="button">Subir</button>
-          </div> 
+        
            <!-- Imagen URL-->
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
