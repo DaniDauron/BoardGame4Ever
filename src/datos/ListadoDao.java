@@ -16,6 +16,7 @@ public class ListadoDao {
 	static Statement st = null;
 	static ResultSet rs = null;
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado(int limite) {
 
 		List slider = new ArrayList();
@@ -71,6 +72,7 @@ public class ListadoDao {
 		return slider;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado() {
 
 		List listado = new ArrayList();
@@ -128,6 +130,7 @@ public class ListadoDao {
 		
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaNovedades() {
 
 		List listado = new ArrayList();
@@ -182,6 +185,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoTablero() {
 
 		List listado = new ArrayList();
@@ -236,6 +240,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoDados() {
 
 		List listado = new ArrayList();
@@ -290,6 +295,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoCartas() {
 
 		List listado = new ArrayList();
@@ -344,6 +350,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorEdades(String rango) {
 
 		List listado = new ArrayList();
@@ -408,6 +415,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorDuracion(String duracion) {
 
 		List listado = new ArrayList();
@@ -472,6 +480,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorNumeroJugadores(String jugadores) {
 
 		List listado = new ArrayList();
@@ -520,6 +529,7 @@ public class ListadoDao {
 		return listado;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorBusqueda(String juego) {
 
 		List listado = new ArrayList();

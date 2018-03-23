@@ -16,6 +16,7 @@ public class ListadoAdminDao {
 	static Statement st = null;
 	static ResultSet rs = null;
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperaElmentoListadoAdmin(){
 		
 		List listado = new ArrayList<>();
