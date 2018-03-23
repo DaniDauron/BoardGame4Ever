@@ -28,7 +28,7 @@
               </div>
           </div>
 
-          <!-- Password input-->
+          <!-- Edad-->
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la edad:</strong></label>
             <div class="">
@@ -83,12 +83,27 @@
       
          <!-- OPCION SUBIR IMAGEN --> 
           <div class="form-group">
-            <label class=" control-label" for="filebutton"><strong>Imagen a subir:</strong></label>
+            <label class=" control-label" for="filebutton"><strong>Imagen a subir desde el equipo:</strong></label>
             <div class="">
               <input id="filebutton" name="urlImg" class="input-file" type="file">
             </div>
+             <button class="btn btn-default" type="button">Subir</button>
+          </div> 
+           <!-- Imagen URL-->
+          <div class="form-group">
+            <label class=" control-label" for="passwordinput"><strong>Indica la direccion url de la imagen:</strong></label>
+            <div class="">
+              <input id="textinput" name="url"  class="form-control input-md" type="text">
+              </div>
+          </div> 
+       
+        <!-- Stock-->
+          <div class="form-group">
+            <label class=" control-label" for="passwordinput"><strong>Control de Stock:</strong></label>
+            <div class="">
+              <input id="textinput" name="stock"  class="form-control input-md" type="text">
+              </div>
           </div>
-        <button class="btn btn-default" type="button">Subir</button>
           <!-- Descripcion -->
           <div class="form-group">
             <label class=" control-label" for="textarea"><strong>Indica una pequeña descripcion: </strong></label>
@@ -96,8 +111,9 @@
               <textarea class="form-control" id="descripcion" name="textarea">Introduce el texo que quieras</textarea>
             </div>
           </div>
+           
  		
- 		<!-- BOTONES ALTA Y MODIFICAR -->
+ 		<!-- BOTONES ALTAR -->
           <div class="form-group">
               <div class="">
               
