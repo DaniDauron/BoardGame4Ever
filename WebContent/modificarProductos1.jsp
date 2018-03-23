@@ -8,15 +8,16 @@
 
 <link href="./css/formularios.css" rel="stylesheet" type="text/css">
 <jsp:include page="./imports_comunes.html" />
-
+<!-- 
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
 </head>
-
+ -->
 <body>
 <jsp:include page="./headeradmin.jsp" />
-	<div class="container auth">
+
+	<div class="container  contenidoprincipal">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
 			<form action="InsertaRegistro" >

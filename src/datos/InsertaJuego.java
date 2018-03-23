@@ -36,25 +36,27 @@ public class InsertaJuego {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String nombre, tipo, img, descripcion, publicacion=null; 
-			int edad, maxJug, minJug, tiempo, stock;
-			float precio;
+			PreparedStatement ps = null;
 			
-			nombre=p.getNombreProducto();
-			edad= p.getEdad();
-			tipo= p.getTipo();
-			maxJug= p.getMaxJugadores();
-			minJug= p.getMinJugadores();
-			precio= p.getPrecio();
-			tiempo=p.getTiempoEstimado();
-			img= p.getImagen();
-			descripcion= p.getDescripcion();
-			stock=p.getStock();
+            String query = "Insert into producto (jug_min, jug_max,duracion, precio, publicacion, edad, descripcion, nombre, img, stock, tipo) values (?,?,?,?,?,?,?,?,?,?,?) ;";
 			
+			ps = con.prepareStatement(query);
 			
-			String query = "INSERT INTO producto (jug_min, jug_max, duracion, precio, publicacion, edad, descripcion, nombre, img, stock, tipo ) "
-					+ "VALUES (" +minJug+ ", " +maxJug+ ", " +tiempo+ ", " +precio+ ", " + publicacion+ ", " +edad+ ", " +descripcion+ ", " +nombre+ ", " +img+ ", " +stock+ ", " +tipo+ ")";
-			rs = st.executeQuery(query);
+			ps.setInt(1, p.getMinJugadores());
+			ps.setInt(2, p.getMaxJugadores());
+			ps.setInt(3, p.getTiempoEstimado());
+			ps.setFloat(4, p.getPrecio());
+			ps.setDate(5, new Date(2018, 03, 27));
+			ps.setInt(6, p.getEdad());
+			ps.setString(7, p.getDescripcion());
+			ps.setString(8, p.getNombreProducto());
+			ps.setString(9, p.getImagen());
+			ps.setInt(10, p.getStock());
+			ps.setInt(11, Integer.parseInt(p.getTipo()));
+		
+			
+			int filas = ps.executeUpdate();
+			
 
 			
 

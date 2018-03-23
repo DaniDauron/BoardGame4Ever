@@ -11,10 +11,12 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-<div class="container auth">
+<jsp:include page="./headeradmin.jsp" />
+<div class="container  contenidoprincipal">
     <h1 class="text-center"> ALTA PRODUCTOS  </h1>
     <div id="big-form" class="well auth-box">
-      <form action="InsertaRegistro?accion=alta"> 
+      <form action="InsertaRegistro"> 
+      <input name="accion" value="alta" style="display:none">
         <fieldset>
 <!--Obciones producto-->
           <legend><strong>Introduce los siguientes datos para el alta del producto:</strong></legend>
@@ -24,7 +26,7 @@
           <div class="form-group">
             <label class=" control-label" for="textinput"><strong>Nombre del producto</strong></label>  
             <div class="">
-              <input id="textinput" name="nombreProd"  class="form-control input-md" type="text">
+              <input id="textinput" name="nombre"  class="form-control input-md" type="text">
               </div>
           </div>
 
@@ -53,7 +55,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong> Nº Jugadores máximo: </strong></label>
             <div class="">
-              <input id="textinput" name="maxJug"  class="form-control input-md" type="text">
+              <input id="textinput" name="jugMax"  class="form-control input-md" type="text">
               </div>
           </div>
           
@@ -61,7 +63,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
             <div class="">
-              <input id="textinput" name="minJug"  class="form-control input-md" type="text">
+              <input id="textinput" name="jugMin"  class="form-control input-md" type="text">
               </div>
           </div>
           
@@ -86,7 +88,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
             <div class="">
-              <input id="textinput" name="url"  class="form-control input-md" type="text">
+              <input id="textinput" name="img"  class="form-control input-md" type="text">
               </div>
           </div> 
        
@@ -101,7 +103,7 @@
           <div class="form-group">
             <label class=" control-label" for="textarea"><strong>Indica una pequeña descripción: </strong></label>
             <div class="">                     
-              <textarea class="form-control" id="descripcion" name="textarea">Introduce el texo que quieras</textarea>
+              <textarea class="form-control" id="descripcion" name="descripcion">Introduce el texo que quieras</textarea>
             </div>
           </div>
            
