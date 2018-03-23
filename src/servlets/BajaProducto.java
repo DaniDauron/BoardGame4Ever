@@ -24,10 +24,15 @@ public class BajaProducto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		RequestDispatcher view;
+		if(ServicioProducto.bajaProducto(request.getParameter("id"))){
+			view = request.getRequestDispatcher("ListadoAdmin");
+		}else{
+			view = request.getRequestDispatcher("error.jsp");
+		}
 		
-		ServicioProducto.bajaProducto(request.getParameter("id"));		
-		RequestDispatcher view = request.getRequestDispatcher("ListadoAdmin");
 		view.forward(request, response);
+
 	}
 
 	/**

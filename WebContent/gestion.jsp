@@ -77,9 +77,9 @@
 					
 					
 					<div class="col-sm-2">
-					
-						<button type="button" class="btn btn-light">Eliminar</button>
-						
+					<a href=BajaProducto?id=${juego.idProd}>
+					<button type="button" class="btn btn-light">Eliminar</button>
+					</a>					
 					</div>
 				</div>
 			</c:forEach>

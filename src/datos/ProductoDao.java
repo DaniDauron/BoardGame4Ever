@@ -82,7 +82,7 @@ public class ProductoDao {
 
 			try {
 
-				String query = "UPDATE producto SET 'en_venta'='false' WHERE 'id'=" + numero;
+				String query = "UPDATE producto SET en_venta='false' WHERE id=" + numero;
 				int updates = st.executeUpdate(query);
 
 				if (updates >= 1) {
