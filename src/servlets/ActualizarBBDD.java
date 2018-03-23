@@ -40,7 +40,7 @@ public class ActualizarBBDD extends HttpServlet {
 			InsertaJuego.actualizarBBDD(p);
 			
 		}
-		RequestDispatcher view = request.getRequestDispatcher("gestion.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("ListadoAdmin");
 		view.forward(request, response);
 		
 	}

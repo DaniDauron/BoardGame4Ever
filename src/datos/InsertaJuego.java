@@ -125,14 +125,15 @@ public static void actualizarBBDD(Producto p){
 			
 			int filas = ps.executeUpdate();
 			
-			throw new Exception("filas "+filas + " mi id: "+p.getIdProd());
-
+		
+			System.out.println(" mi id: "+p.getIdProd() + "nombre "+p.getNombreProducto() + " filas "+filas + " img "+ p.getImagen() + " ay");
 			
 
 		} catch (SQLException b) {
 			System.out.println("error es " + b.getMessage() );
 			System.out.println(b.getErrorCode() + " codigo");
 			System.out.println( b.getLocalizedMessage());
+			System.out.println(" mi id: "+p.getIdProd() + "nombre "+p.getNombreProducto());
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage() + " NO SE QEU SOY");

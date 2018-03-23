@@ -118,7 +118,6 @@ public class Producto {
 	}
 	
 	
-
 	public String getImagen() {
 		return imagen;
 	}

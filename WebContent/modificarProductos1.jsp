@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<jsp:include page="./headeradmin.jsp" />
 	<div class="container auth">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
@@ -115,7 +116,7 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
             <div class="">
-              <input id="textinput" name="url" value="${prod.imagen }"
+              <input id="textinput" name="img" value="${prod.imagen}"
               	class="form-control input-md" type="text">
               </div>
           </div> 
