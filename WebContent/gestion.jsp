@@ -69,7 +69,7 @@
 					</div>
 
 					<div class="col-sm-2">
-					<form action="modificarProductos?idProd=${juego.idProd}"> 
+					<form action="modificarProductos1?idProd=${juego.idProd}"> 
 						<button type="submit" class="btn btn-light">Modificar</button>
 						</form>
 					</div>
