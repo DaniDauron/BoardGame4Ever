@@ -18,7 +18,7 @@
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
 			<form action="ListadoAdmin">
-				
+		 <legend><strong>Modifica los campos que desees del producto:</strong></legend>		
 				<!-- Nombre del producto-->
 				<div class="form-group">
 					<label class="control-label" for="textinput"><strong>Indica el nuevo Nombre del producto</strong></label>
@@ -103,6 +103,21 @@
 					</div>
 					<button class="btn btn-default" type="button">Subir</button>
 				</div>
+				<!-- Imagen URL-->
+          <div class="form-group">
+            <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
+            <div class="">
+              <input id="textinput" name="url"  class="form-control input-md" type="text">
+              </div>
+          </div> 
+       
+        <!-- Stock-->
+          <div class="form-group">
+            <label class=" control-label" for="passwordinput"><strong>Control de Stock:</strong></label>
+            <div class="">
+              <input id="textinput" name="stock"  class="form-control input-md" type="text">
+              </div>
+          </div>
 
 				<!-- Descripcion -->
 				<div class="form-group">
