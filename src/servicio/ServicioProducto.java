@@ -10,5 +10,8 @@ public class ServicioProducto {
 		return ProductoDao.bajaJuego(id);
 	}
 	
-	
+	public static boolean reactivarProducto(String id) {		
+		return ProductoDao.reactivarJuego(id);
+	}
+		
 }
