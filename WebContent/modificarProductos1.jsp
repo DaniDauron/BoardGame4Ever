@@ -23,7 +23,7 @@
 				<div class="form-group">
 					<label class="control-label" for="textinput"><strong>Indica el nuevo Nombre del producto:</strong></label>
 					<div class="">
-						<input id="textinput" name="nombre" value="${prod.nombreProducto}"
+						<input id="textinput" name="nombre" value="${prod.nombreProducto }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -33,7 +33,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Indica la	edad:</strong></label>
 					<div class="">
-						<input id="textinput" name="textinput" value="${prod.edad}"
+						<input id="textinput" name="edad" value="${prod.edad }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -58,7 +58,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong> Nº Jugadores máximo:</strong></label>
 					<div class="">
-						<input id="textinput" name="textinput"
+						<input id="textinput" name="jugMax" value="${prod.maxJugadores }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -68,7 +68,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
 					<div class="">
-						<input id="textinput" name="textinput"
+						<input id="textinput" name="minJug" value="${prod.minJugadores }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -78,7 +78,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Indica el	precio:</strong></label>
 					<div class="">
-						<input id="textinput" name="textinput"
+						<input id="textinput" name="precio" value="${prod.precio }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -88,7 +88,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Indica la duración del juego (minutos):</strong></label>
 					<div class="">
-						<input id="textinput" name="textinput"
+						<input id="textinput" name="duracion" value="${tiempoEstimado }"
 							class="form-control input-md" type="text">
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
@@ -107,7 +107,8 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
             <div class="">
-              <input id="textinput" name="url"  class="form-control input-md" type="text">
+              <input id="textinput" name="url" value="${prod.imagen }"
+              	class="form-control input-md" type="text">
               </div>
           </div> 
        
@@ -115,7 +116,8 @@
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Control de Stock:</strong></label>
             <div class="">
-              <input id="textinput" name="stock"  class="form-control input-md" type="text">
+              <input id="textinput" name="stock" value="${prod.stock }"
+              	class="form-control input-md" type="text">
               </div>
           </div>
 
@@ -123,7 +125,8 @@
 				<div class="form-group">
 					<label class=" control-label" for="textarea"><strong>Indica una pequeña descripción:</strong> </label>
 					<div class="">
-						<textarea class="form-control" id="textarea" name="textarea">Introduce el texo que quieras</textarea>
+						<textarea class="form-control" id="textarea"
+							value="${prod.descripcion }" name="descripcion">Introduce el texo que quieras</textarea>
 					</div>
 					<button class="btn btn-default" type="button">Modificar</button>
 				</div>
