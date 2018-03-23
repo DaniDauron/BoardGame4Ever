@@ -103,6 +103,50 @@ public class ProductoDao {
 		return cambio;
 
 	}
+	
+	public static boolean reactivarJuego(String numero) {
+
+		boolean cambio = false;
+
+		try {
+			String driverClassName = "com.mysql.jdbc.Driver";
+			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
+			String user = "boarduser";
+			String password = "1111";
+			try {
+				Class.forName(driverClassName);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+
+			con = DriverManager.getConnection(driverUrl, user, password);
+			st = con.createStatement();
+
+			con.setAutoCommit(false);
+
+			try {
+
+				String query = "UPDATE producto SET en_venta='true' WHERE id=" + numero;
+				int updates = st.executeUpdate(query);
+
+				if (updates >= 1) {
+					cambio = true;
+				}
+
+				con.commit();
+
+			} catch (Exception e) {
+				con.rollback();
+			}
+
+		} catch (Exception a) {
+			System.out.println("error es " + a.getMessage());
+
+		}
+
+		return cambio;
+
+	}
 
 	
 	public static Producto recuperarJuegoModificar(String numero) {
