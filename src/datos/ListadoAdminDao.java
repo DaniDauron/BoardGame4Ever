@@ -37,7 +37,7 @@ public class ListadoAdminDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 			
-			String query = "SELECT id, nombre, stock FROM producto";
+			String query = "SELECT id, nombre, stock FROM producto where en_venta = 'true'";
 			rs = st.executeQuery(query);
 			
 			while(rs.next()){
