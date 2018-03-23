@@ -69,17 +69,17 @@
 					</div>
 
 					<div class="col-sm-2">
-					<form action="modificarProductos1?idProd=${juego.idProd}"> 
+					<a href="modificarProductos1?idProd=${juego.idProd}"> 
 						<button type="submit" class="btn btn-light">Modificar</button>
-						</form>
+						</a>
 					</div>
 					
 					
 					
 					<div class="col-sm-2">
-					
-						<button type="button" class="btn btn-light">Eliminar</button>
-						
+					<a href="BajaProducto?id=${juego.idProd}">
+					<button type="button" class="btn btn-light">Eliminar</button>
+					</a>					
 					</div>
 				</div>
 			</c:forEach>
