@@ -19,6 +19,7 @@ public class Producto {
 	private String tipo;
 	private int stock;
 	
+	
 	/*
 	 * Constructor y métodos.
 	 */

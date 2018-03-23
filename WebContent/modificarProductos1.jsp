@@ -17,7 +17,7 @@
 	<div class="container auth">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
-			<form action="ListadoAdmin">
+			<form action="InsertaRegistro?accion=modificar">
 		 <legend><strong>Modifica los campos que desees del producto:</strong></legend>		
 				<!-- Nombre del producto-->
 				<div class="form-group">
