@@ -37,7 +37,7 @@ public class ActualizarBBDD extends HttpServlet {
 			Producto p = new Producto();
 			
 			p= ServicioAltaProducto.rellenarProducto(request);
-			InsertaJuego.(p);
+			InsertaJuego.actualizarBBDD(p);
 			
 		}
 		RequestDispatcher view = request.getRequestDispatcher("gestion.jsp");

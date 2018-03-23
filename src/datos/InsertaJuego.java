@@ -115,8 +115,9 @@ public static void actualizarBBDD(Producto p){
 			stock=p.getStock();
 			
 			
-			String query = "INSERT INTO (jug_min, jug_max, duracion, precio, publicacion, edad, descripcion, nombre, img, stock, tipo ) "
-					+ "VALUES (" +minJug+ ", " +maxJug+ ", " +tiempo+ ", " +precio+ ", " + publicacion+ ", " +edad+ ", " +descripcion+ ", " +nombre+ ", " +img+ ", " +stock+ ", " +tipo+ ")";
+			String query = "UPDATE producto SET jug_min=" +minJug+ ", jug_max=" +maxJug+", duracion=" +tiempo+ ", precio=" +precio+ ", publicacion=" +publicacion+ ", edad=" +edad+
+					", descripcion=" +descripcion+ ", nombre=" +nombre+ ", img=" +img+ ", stock=" +stock+ ",tipo=" +tipo+";";
+				
 			rs = st.executeQuery(query);
 
 			
