@@ -24,12 +24,12 @@ public class ActualizarBBDD extends HttpServlet {
 		Producto prod = new Producto();
 		
 		prod.setNombreProducto(request.getParameter("nombreProd"));
-		//prod.setEdad(request.getParameter("edad"));
+		prod.setEdad(Integer.parseInt(request.getParameter("edad")));
 		prod.setTipo(request.getParameter("tipo"));
-		//prod.setMaxJugadores(request.getParameter("maxJug"));
-		//prod.setMinJugadores(request.getParameter("minJug"));
-		//prod.setPrecio(request.getParameter("precio"));
-		//prod.setTiempoEstimado(request.getParameter("duracion"));
+		prod.setMaxJugadores(Integer.parseInt(request.getParameter("maxJug")));
+		prod.setMinJugadores(Integer.parseInt(request.getParameter("minJug")));
+		prod.setPrecio(Float.parseFloat(request.getParameter("precio")));
+		prod.setTiempoEstimado(Integer.parseInt(request.getParameter("duracion")));
 		prod.setImagen(request.getParameter("urlImg"));
 		prod.setDescripcion(request.getParameter("descripcion"));
 			
