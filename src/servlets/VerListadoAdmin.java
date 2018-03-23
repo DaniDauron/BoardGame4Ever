@@ -16,7 +16,7 @@ import modelo.Producto;
 
 @WebServlet(urlPatterns = {"/ListadoAdmin"})
 public class VerListadoAdmin extends HttpServlet {
-
+	private static final long serialVersionUID = 1L;
 	
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

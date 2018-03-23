@@ -8,18 +8,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+//import javax.servlet.http.HttpSession;
 
 import modelo.Producto;
 
 @WebServlet(urlPatterns={"/InsertaRegistro"})
 public class ActualizarBBDD extends HttpServlet {
-
+	private static final long serialVersionUID = 1L;
 	
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		HttpSession sesion = request.getSession();
+		//HttpSession sesion = request.getSession();
 		
 		Producto prod = new Producto();
 		

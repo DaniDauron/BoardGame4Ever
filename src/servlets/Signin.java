@@ -16,11 +16,12 @@ import javax.servlet.http.HttpServlet;
 
 	@WebServlet(urlPatterns={"/Signin"})
 	public class Signin extends HttpServlet {
+		private static final long serialVersionUID = 1L;
 
 		protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
 			
-			HttpSession sesion = request.getSession();
+			//HttpSession sesion = request.getSession();
 			
 			RequestDispatcher view = request.getRequestDispatcher("zona_admin.jsp");
 			view.forward(request, response);

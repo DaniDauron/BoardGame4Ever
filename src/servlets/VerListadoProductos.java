@@ -16,7 +16,7 @@ import modelo.Producto;
 
 @WebServlet(urlPatterns = { "/VerListado" })
 public class VerListadoProductos extends HttpServlet {
-
+	private static final long serialVersionUID = 1L;
 	
 	@SuppressWarnings("unchecked")
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
