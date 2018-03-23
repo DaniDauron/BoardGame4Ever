@@ -77,26 +77,23 @@ public class ProductoDao {
 
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
-			
+
 			con.setAutoCommit(false);
-			
+
 			try {
-				
+
 				String query = "UPDATE producto SET 'en_venta'='false' WHERE 'id'=" + numero;
 				int updates = st.executeUpdate(query);
-				
+
 				if (updates >= 1) {
 					cambio = true;
 				}
-				
-				con.commit();
-				
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-		
 
-			
+				con.commit();
+
+			} catch (Exception e) {
+				con.rollback();
+			}
 
 		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
