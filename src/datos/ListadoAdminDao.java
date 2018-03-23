@@ -37,7 +37,7 @@ public class ListadoAdminDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 			
-			String query = "SELECT id, nombre, stock FROM producto where en_venta = 'true'";
+			String query = "SELECT id, nombre, stock, en_venta FROM producto where en_venta = 'true'";
 			rs = st.executeQuery(query);
 			
 			while(rs.next()){
@@ -45,6 +45,11 @@ public class ListadoAdminDao {
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setStock(rs.getInt("stock"));
+				if(rs.getString("en_venta") == "true"){
+					x.setEnVenta(true);
+				}else{
+					x.setEnVenta(false);
+				}
 				listado.add(x);
 			}
 			

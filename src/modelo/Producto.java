@@ -18,6 +18,7 @@ public class Producto {
 	private String imagen;
 	private String tipo;
 	private int stock;
+	private boolean enVenta;
 	
 	
 	/*
@@ -141,6 +142,16 @@ public class Producto {
 
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+	
+	
+
+	public boolean isEnVenta() {
+		return enVenta;
+	}
+
+	public void setEnVenta(boolean enVenta) {
+		this.enVenta = enVenta;
 	}
 
 	@Override
