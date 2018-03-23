@@ -20,7 +20,7 @@ public class ModificarProductos extends HttpServlet {
 			@SuppressWarnings("unused")
 			HttpSession sesion = request.getSession();
 			
-			RequestDispatcher view = request.getRequestDispatcher("modificarProductos.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("modificarProductos1.jsp");
 			view.forward(request, response);
 			
 		}
