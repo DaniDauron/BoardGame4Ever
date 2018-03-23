@@ -35,7 +35,7 @@ public class ActualizarBBDD extends HttpServlet {
 			InsertaJuego.insertarBBDD(p);
 		}else if(pagina.equals("modificar")){
 			Producto p = new Producto();
-			
+			p.setIdProd(Integer.parseInt(request.getParameter("id")));
 			p= ServicioAltaProducto.rellenarProducto(request);
 			InsertaJuego.actualizarBBDD(p);
 			

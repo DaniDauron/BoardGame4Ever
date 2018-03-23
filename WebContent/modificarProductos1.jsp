@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,14 +18,17 @@
 	<div class="container auth">
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
-			<form action="InsertaRegistro?accion=modificar">
+			<form action="InsertaRegistro" >
 		 <legend><strong>Modifica los campos que desees del producto:</strong></legend>		
+		 <input name="accion" value="modificar" style="display:none">
+		 <input name="id" value="${prod.idProd }" style="display:none">
 				<!-- Nombre del producto-->
 				<div class="form-group">
 					<label class="control-label" for="textinput"><strong>Indica el nuevo Nombre del producto:</strong></label>
 					<div class="">
 						<input id="textinput" name="nombre" value="${prod.nombreProducto }"
 							class="form-control input-md" type="text">
+			
 					</div>
 				</div>
 
@@ -42,11 +46,25 @@
 				<div class="form-group">
 					<label class=" control-label" for="selectbasic"><strong>Indica el tipo de juego:</strong></label>
 					<div class="">
-						<select id="selectbasic" name="selectbasic" class="form-control">
-							<option value="0">-----</option>
-							<option value="1">Dados</option>
-							<option value="2">Tableros</option>
+						<select id="selectbasic" name="tipo" class="form-control">
+							<c:if test="${prod.tipo == '1' }">
+							<option selected="selected" value="1">Tableros</option>
+							<option value="2">Dados</option>
 							<option value="3">Cartas</option>
+							</c:if>
+							
+							<c:if test="${prod.tipo == '2' }">
+							<option value="1">Tableros</option>
+							<option selected="selected" value="2">Dados</option>
+							<option value="3">Cartas</option>
+							</c:if>
+							
+							<c:if test="${prod.tipo == '3' }">
+							<option value="1">Tableros</option>
+							<option value="2">Dados</option>
+							<option selected="selected" value="3">Cartas</option>
+							</c:if>
+							
 						</select>
 					</div>
 					
@@ -67,7 +85,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Nº Jugadores mínimo:</strong></label>
 					<div class="">
-						<input id="textinput" name="minJug" value="${prod.minJugadores }"
+						<input id="textinput" name="jugMin" value="${prod.minJugadores }"
 							class="form-control input-md" type="text">
 					</div>
 					
@@ -87,7 +105,7 @@
 				<div class="form-group">
 					<label class=" control-label" for="passwordinput"><strong>Indica la duración del juego (minutos):</strong></label>
 					<div class="">
-						<input id="textinput" name="duracion" value="${tiempoEstimado }"
+						<input id="textinput" name="duracion" value="${prod.tiempoEstimado }"
 							class="form-control input-md" type="text">
 					</div>
 					
@@ -116,7 +134,7 @@
 					<label class=" control-label" for="textarea"><strong>Indica una pequeña descripción:</strong> </label>
 					<div class="">
 						<textarea class="form-control" id="textarea"
-							value="${prod.descripcion }" name="descripcion">Introduce el texo que quieras</textarea>
+							name="descripcion">${prod.descripcion }</textarea>
 					</div>
 					
 				</div>

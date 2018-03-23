@@ -24,7 +24,7 @@ public class ModificarProductos extends HttpServlet {
 		HttpSession sesion = request.getSession();
 
 		Producto p = new Producto();
-		p = ProductoDao.recuperarJuego(request.getParameter("idProd"));
+		p = ProductoDao.recuperarJuegoModificar(request.getParameter("idProd"));
 		request.setAttribute("prod", p);
 		
 		RequestDispatcher view = request.getRequestDispatcher("modificarProductos1.jsp");

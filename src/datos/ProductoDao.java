@@ -167,7 +167,7 @@ public class ProductoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT p.id, p.nombre, p.categoria, p.edad, p.duracion, p.jug_min, p.jug_max, p.precio, p.descripcion, p.img, p.stock, p.tipo from producto p where t.id = p.tipo and p.id="
+			String query = "SELECT p.id, p.nombre, p.categoria, p.edad, p.duracion, p.jug_min, p.jug_max, p.precio, p.descripcion, p.img, p.stock, p.tipo from producto p where p.id="
 					+ numero + ";";
 			rs = st.executeQuery(query);
 			x = new Producto();
