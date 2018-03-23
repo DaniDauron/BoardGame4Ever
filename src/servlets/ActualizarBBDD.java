@@ -32,6 +32,9 @@ public class ActualizarBBDD extends HttpServlet {
 		prod.setTiempoEstimado(Integer.parseInt(request.getParameter("duracion")));
 		prod.setImagen(request.getParameter("urlImg"));
 		prod.setDescripcion(request.getParameter("descripcion"));
+		//prod.setStock(stock);
+		
+		
 			
 		RequestDispatcher view = request.getRequestDispatcher("gestion.jsp");
 		view.forward(request, response);
