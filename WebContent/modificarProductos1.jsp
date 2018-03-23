@@ -26,7 +26,6 @@
 						<input id="textinput" name="nombre" value="${prod.nombreProducto }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
 				</div>
 
 				<!-- 	EDAD    -->
@@ -36,7 +35,7 @@
 						<input id="textinput" name="edad" value="${prod.edad }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
 				<!-- categoria  -->
@@ -50,7 +49,7 @@
 							<option value="3">Cartas</option>
 						</select>
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 			
 			
@@ -61,7 +60,7 @@
 						<input id="textinput" name="jugMax" value="${prod.maxJugadores }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
 				<!-- Jugadores min-->
@@ -71,7 +70,7 @@
 						<input id="textinput" name="minJug" value="${prod.minJugadores }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
 				<!-- Precio-->
@@ -81,7 +80,7 @@
 						<input id="textinput" name="precio" value="${prod.precio }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
 				<!-- Duracion-->
@@ -91,18 +90,9 @@
 						<input id="textinput" name="duracion" value="${tiempoEstimado }"
 							class="form-control input-md" type="text">
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
-				<!-- OPCION SUBIR IMAGEN -->
-				<div class="form-group">
-					<label class=" control-label" for="filebutton"><strong>Imagen a subir:</strong></label>
-					<div class="">
-						<input id="filebutton" name="filebutton" class="input-file"
-							type="file">
-					</div>
-					<button class="btn btn-default" type="button">Subir</button>
-				</div>
 				<!-- Imagen URL-->
           <div class="form-group">
             <label class=" control-label" for="passwordinput"><strong>Indica la dirección url de la imagen:</strong></label>
@@ -128,7 +118,7 @@
 						<textarea class="form-control" id="textarea"
 							value="${prod.descripcion }" name="descripcion">Introduce el texo que quieras</textarea>
 					</div>
-					<button class="btn btn-default" type="button">Modificar</button>
+					
 				</div>
 
 				<!-- BOTONES Guardar -->
