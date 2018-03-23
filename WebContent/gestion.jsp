@@ -75,7 +75,7 @@
 						</div>
 
 
-						<c:if test="${producto.enVenta == true}">
+						<c:if test="${juego.enVenta eq 1}">
 							<div class="col-sm-2">
 								<a href="BajaProducto?accion=baja&id=${juego.idProd}">
 									<button type="button" class="btn btn-light">Eliminar</button>
@@ -83,19 +83,13 @@
 							</div>
 						</c:if>
 
-						<c:if test="${producto.enVenta == false}">
+						<c:if test="${juego.enVenta eq 0}">
 							<div class="col-sm-2">
 								<a href="BajaProducto?accion=rrestaurar&id=${juego.idProd}">
 									<button type="button" class="btn btn-light">Restaurar</button>
 								</a>
 							</div>
 						</c:if>
-
-						<div class="col-sm-2">
-							<a href="BajaProducto?accion=baja&id=${juego.idProd}">
-								<button type="button" class="btn btn-light">Eliminar</button>
-							</a>
-						</div>
 
 					</div>
 				</c:forEach>

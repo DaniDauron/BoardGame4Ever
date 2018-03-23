@@ -82,7 +82,7 @@ public class ProductoDao {
 
 			try {
 
-				String query = "UPDATE producto SET en_venta='false' WHERE id=" + numero;
+				String query = "UPDATE producto SET en_venta=0 WHERE id=" + numero;
 				int updates = st.executeUpdate(query);
 
 				if (updates >= 1) {
@@ -126,7 +126,7 @@ public class ProductoDao {
 
 			try {
 
-				String query = "UPDATE producto SET en_venta='true' WHERE id=" + numero;
+				String query = "UPDATE producto SET en_venta=1  WHERE id=" + numero;
 				int updates = st.executeUpdate(query);
 
 				if (updates >= 1) {

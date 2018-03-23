@@ -17,47 +17,49 @@ public class ListadoAdminDao {
 	static ResultSet rs = null;
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public static List recuperaElmentoListadoAdmin(){
-		
+	public static List recuperaElmentoListadoAdmin() {
+
 		List listado = new ArrayList<>();
 		Producto x;
-		
-		try{
+
+		try {
 			String driverClassName = "com.mysql.jdbc.Driver";
 			String driverUrl = "jdbc:mysql://192.168.200.17/gameboard";
 			String user = "boarduser";
 			String password = "1111";
-			
-			try{
+
+			try {
 				Class.forName(driverClassName);
-			}catch(Exception e){
+			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-			
+
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
-			
-			String query = "SELECT id, nombre, stock, en_venta FROM producto where en_venta = 'true'";
+
+			String query = "SELECT id, nombre, stock, en_venta FROM producto";
 			rs = st.executeQuery(query);
-			
-			while(rs.next()){
+
+			while (rs.next()) {
 				x = new Producto();
 				x.setIdProd(rs.getInt("id"));
 				x.setNombreProducto(rs.getString("nombre"));
 				x.setStock(rs.getInt("stock"));
-				if(rs.getString("en_venta") == "true"){
+				if (rs.getInt("en_venta") == 1) {
 					x.setEnVenta(true);
+				} else if (rs.getInt("en_venta") == 0) {
+					x.setEnVenta(false);
 				}else{
 					x.setEnVenta(false);
 				}
 				listado.add(x);
 			}
-			
-		}catch(Exception a){
+
+		} catch (Exception a) {
 			System.out.println("error es " + a.getMessage());
 			x = new Producto();
 		}
-		
+
 		finally {
 			try {
 				if (rs != null) {
@@ -73,9 +75,9 @@ public class ListadoAdminDao {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return listado;
-		
+
 	}
 
 }

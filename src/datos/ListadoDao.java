@@ -35,7 +35,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id,nombre,precio,img,stock from producto where en_venta = 'true'";
+			String query = "SELECT id,nombre,precio,img,stock from producto where  en_venta = 1";
 			rs = st.executeQuery(query);
 
 			for (int i = 0; i < limite && rs.next(); i++) {
@@ -92,7 +92,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id,nombre,precio,img, stock  from producto where en_venta = 'true'";
+			String query = "SELECT id,nombre,precio,img, stock  from producto where  en_venta = 1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -149,7 +149,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto where en_venta = 'true' ORDER BY publicacion DESC ";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto where en_venta = 1 ORDER BY publicacion DESC ";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -204,7 +204,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=1 and en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=1 and en_venta = 1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -259,7 +259,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=2 and en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=2 and en_venta = 1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -314,7 +314,7 @@ public class ListadoDao {
 			con = DriverManager.getConnection(driverUrl, user, password);
 			st = con.createStatement();
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=3 and  en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE tipo=3 and  en_venta = 1";
 			rs = st.executeQuery(query);
 
 			while (rs.next()) {
@@ -378,7 +378,7 @@ public class ListadoDao {
 				rango_edades = "edad > 16";
 			}
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_edades + " and  en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_edades + " and  en_venta = 1";
 
 			rs = st.executeQuery(query);
 
@@ -443,7 +443,7 @@ public class ListadoDao {
 				rango_duracion = "duracion >= 100";
 			}
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_duracion+"  and en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_duracion+"  and en_venta = 1";
 
 			rs = st.executeQuery(query);
 
@@ -508,7 +508,7 @@ public class ListadoDao {
 				rango_jugadores = "jug_min > 3";
 			}
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_jugadores+ "  and en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE " + rango_jugadores+ "  and en_venta = 1";
 
 			rs = st.executeQuery(query);
 
@@ -557,7 +557,7 @@ public class ListadoDao {
 				}
 			}
 
-			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE" + texto + " and en_venta = 'true'";
+			String query = "SELECT id, nombre, precio, img, stock FROM producto WHERE" + texto + " and en_venta = 1";
 
 			rs = st.executeQuery(query);
 
