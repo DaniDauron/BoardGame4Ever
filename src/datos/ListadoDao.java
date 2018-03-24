@@ -15,7 +15,7 @@ public class ListadoDao {
 	static Connection con = null;
 	static Statement st = null;
 	static ResultSet rs = null;
-
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado(int limite) {
 
@@ -72,6 +72,13 @@ public class ListadoDao {
 		return slider;
 	}
 
+	
+	/**
+	 * @author Cristian y Olga
+	 * @return Un objeto de tipo List que contiene todos los productos de la base de datos
+	 */
+	
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado() {
 

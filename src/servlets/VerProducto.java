@@ -23,6 +23,8 @@ public class VerProducto extends HttpServlet {
 	 * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
 	 * methods.
 	 *
+	 * @author Carlos
+	 *
 	 * @param request
 	 *            servlet request
 	 * @param response
