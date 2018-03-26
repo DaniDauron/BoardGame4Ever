@@ -13,8 +13,12 @@ import datos.ProductoDao;
 import modelo.Producto;
 
 /**
- * Servlet implementation class PruebaCarlos
+ * Implementación de la clase Servlet para la visualización de un producto
+ * 
+ * @author Carlos
+ * 
  */
+
 @WebServlet(urlPatterns = { "/VerProducto" })
 public class VerProducto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,8 +26,6 @@ public class VerProducto extends HttpServlet {
 	/**
 	 * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
 	 * methods.
-	 *
-	 * @author Carlos
 	 *
 	 * @param request
 	 *            servlet request

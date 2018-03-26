@@ -7,14 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 import java.sql.PreparedStatement;
 
 import modelo.Producto;
 
 public class InsertaJuego {
 
+	@SuppressWarnings({ "deprecation", "unused" })
 	public static void insertarBBDD(Producto p){
 		
 		Connection con = null;
@@ -85,6 +84,7 @@ public class InsertaJuego {
 	
 	
 	
+@SuppressWarnings("deprecation")
 public static void actualizarBBDD(Producto p){
 		
 		Connection con = null;

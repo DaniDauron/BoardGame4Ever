@@ -14,6 +14,13 @@ import javax.servlet.http.HttpSession;
 import datos.ListadoAdminDao;
 import modelo.Producto;
 
+/**
+ * Implementación de la clase Servlet para el listado de los juegos en la zona de administrador
+ * 
+ * @author Cristian y Olga
+ *
+ */
+
 @WebServlet(urlPatterns = {"/ListadoAdmin"})
 public class VerListadoAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;

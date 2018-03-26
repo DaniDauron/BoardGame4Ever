@@ -14,6 +14,13 @@ import javax.servlet.http.HttpSession;
 import datos.ListadoDao;
 import modelo.Producto;
 
+/**
+ * Implementación de la clase Servlet para el listado y visualización de todo el listado de juegos
+ * 
+ * @author Dani
+ *
+ */
+
 @WebServlet(urlPatterns = { "/VerListado" })
 public class VerListadoProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;

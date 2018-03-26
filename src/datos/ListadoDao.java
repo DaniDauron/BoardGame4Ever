@@ -10,11 +10,26 @@ import java.util.List;
 
 import modelo.Producto;
 
+/**
+ * Implementación de la clase ListadoDao, dónde se recuperan los datos de la base de datos para los diferentes listados de la web
+ * 
+ * @author Cristian, Olga, Dani y Carlos
+ *
+ */
+
 public class ListadoDao {
 
 	static Connection con = null;
 	static Statement st = null;
 	static ResultSet rs = null;
+	
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado acotado de productos y sus características
+	 * 
+	 * @param limite número de elementos que se van a devolver para el listado
+	 * 
+	 * @return una lista de productos y sus características, cantidad de productos indicada por la variable "limite"
+	 */
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado(int limite) {
@@ -72,12 +87,11 @@ public class ListadoDao {
 		return slider;
 	}
 
-	
 	/**
-	 * @author Cristian y Olga
+	 * Método que conecta con la base de datos y devuelte un listado completo de los prodcutos y sus características
+	 * 
 	 * @return Un objeto de tipo List que contiene todos los productos de la base de datos
 	 */
-	
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarElementoListado() {
@@ -137,6 +151,12 @@ public class ListadoDao {
 		
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos ordenados por fecha de publicación
+	 * 
+	 * @return una lista de los productos ordenados de más nuevos a más antiguos
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaNovedades() {
 
@@ -192,6 +212,12 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los prodcutos de tipo tablero
+	 * 
+	 * @return Un objeto List con todos los productos de tipo tablero
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoTablero() {
 
@@ -247,6 +273,12 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos de tipo dados
+	 * 
+	 * @return Un objeto de tipo List de todos los productos de tipo dados
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoDados() {
 
@@ -302,6 +334,12 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos de tipo cartas
+	 * 
+	 * @return Un objeto de tipo List con los productos de tipo cartas
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorTipoCartas() {
 
@@ -357,6 +395,13 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos con una edad recomendad
+	 * 
+	 * @param rango edad mínima recomendada para el producto
+	 * @return listado Un objeto de tipo List con el listado de todos los productos y filtrados por edad
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorEdades(String rango) {
 
@@ -422,6 +467,13 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos con una duración determinada
+	 * 
+	 * @param duracion especifica la duración mínima del juego para mostrarlo
+	 * @return listado Un objeto de tipo List con el listado completo de los productos con una duración mínima especificada
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorDuracion(String duracion) {
 
@@ -487,6 +539,13 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos con un número de jugadores
+	 * 
+	 * @param jugadores filtro para listar los productos por número de jugadores mínimo
+	 * @return listado Un objeto de tipo List con el listado completo de los juegos con un número de jugadores mínimo especificado
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorNumeroJugadores(String jugadores) {
 
@@ -536,6 +595,13 @@ public class ListadoDao {
 		return listado;
 	}
 
+	/**
+	 * Método que conecta con la base de datos y devuelve un listado completo de los productos buscados en el cuadro de búsqueda
+	 * 
+	 * @param juego Un String con la cadena introducida en el cuadro de búsqueda de la web
+	 * @return listado Un objeto de tipo List con el listado completo de los productos que coinciden con la búsqueda
+	 */
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List recuperarListaPorBusqueda(String juego) {
 
