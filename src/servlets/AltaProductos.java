@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import modelo.Producto;
 
+@SuppressWarnings("unused")
 @WebServlet(urlPatterns={"/AltaProductos"})
 public class AltaProductos extends HttpServlet {
 	private static final long serialVersionUID = 1L;

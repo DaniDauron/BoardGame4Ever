@@ -143,7 +143,7 @@ THE SOFTWARE.
                     <li>AJAX form submission w/ visual feedback</li>
                     <li>Creates a Stripe credit card token</li>
                 </ul>
-            </p>
+           
             <p>Be sure to replace the dummy API key with a valid Stripe API key.</p>
             
             <p>Built upon: Bootstrap, jQuery, 

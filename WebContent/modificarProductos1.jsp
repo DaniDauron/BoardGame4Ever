@@ -21,7 +21,7 @@
 		<h1 class="text-center">MODIFICAR PRODUCTOS</h1>
 		<div id="big-form" class="well auth-box">
 			<form action="InsertaRegistro" >
-		 <legend><strong>Modifica los campos que desees del producto:</strong></legend>		
+		 <p><strong>Modifica los campos que desees del producto:</strong></p>		
 		 <input name="accion" value="modificar" style="display:none">
 		 <input name="id" value="${prod.idProd }" style="display:none">
 				<!-- Nombre del producto-->
